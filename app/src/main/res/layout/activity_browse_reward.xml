@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24pt"
+            android:layout_height="24pt"
+            android:layout_marginStart="16pt"
+            android:layout_marginTop="58pt"
+            android:src="@drawable/ge_arrow_back_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54pt"
+            android:text="浏览得奖励"
+            android:textColor="#061925"
+            android:textSize="17pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl002"
+        android:layout_width="match_parent"
+        android:layout_height="94pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTitle">
+
+        <ImageView
+            android:id="@+id/iv001"
+            android:layout_width="match_parent"
+            android:layout_height="94pt"
+            android:background="@drawable/bg_game_task_scan"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv002"
+            android:layout_width="20pt"
+            android:layout_height="20pt"
+            android:layout_marginEnd="@dimen/dimen_8x"
+            android:background="@drawable/ge_selected"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tv002"
+            app:layout_constraintEnd_toStartOf="@+id/tv002"
+            app:layout_constraintTop_toTopOf="@+id/tv002" />
+
+        <TextView
+            android:id="@+id/tv002"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26pt"
+            android:text="继续浏览，即可获得xxxxxx奖励"
+            android:textColor="#233556"
+            android:textSize="14pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl001"
+        android:layout_width="match_parent"
+        android:layout_height="60pt"
+        android:layout_marginTop="60pt"
+        android:background="@drawable/bg_home_tabtop"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentHomeVp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTitle">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/fragmentHomeTb"
+            android:layout_width="match_parent"
+            android:layout_height="44pt"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="5pt"
+            android:background="@drawable/shape_radius_dce2ff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tabIndicator="@color/transparent"
+            app:tabIndicatorColor="@color/transparent"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="scrollable"
+            app:tabPaddingBottom="1dp"
+            app:tabPaddingEnd="1dp"
+            app:tabPaddingStart="1dp"
+            app:tabPaddingTop="1dp"
+            app:tabSelectedTextColor="#FFFFFF"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            app:tabTextColor="#233556" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/fragmentHomeVp"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:background="#E5ECFE"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl001" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

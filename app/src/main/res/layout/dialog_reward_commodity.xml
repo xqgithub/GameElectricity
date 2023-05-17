@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialog"
+    android:layout_width="@dimen/dimen_260x"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ge_money_reward_coins"
+    android:paddingBottom="@dimen/dimen_30x">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/dimen_128x"
+        android:layout_height="@dimen/dimen_128x"
+        android:layout_marginTop="@dimen/dimen_130x"
+        android:src="@drawable/ge_me_gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_introduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_35x"
+        android:layout_marginTop="@dimen/dimen_6x"
+        android:gravity="center"
+        android:text="金币 2310"
+        android:textColor="#57493B"
+        android:textSize="@dimen/dimen_14x"
+        app:layout_constraintTop_toBottomOf="@+id/iv_icon" />
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="@dimen/dimen_90x"
+        android:layout_height="@dimen/dimen_40x"
+        android:layout_marginTop="@dimen/dimen_16x"
+        android:layout_marginEnd="@dimen/dimen_12x"
+        android:gravity="center"
+        android:paddingVertical="@dimen/dimen_10x"
+        android:text="取消"
+        android:textColor="#A1A7AF"
+        android:textSize="@dimen/dimen_14x"
+        app:layout_constraintEnd_toStartOf="@+id/tvSure"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_introduce" />
+
+    <TextView
+        android:id="@+id/tvSure"
+        android:layout_width="@dimen/dimen_90x"
+        android:layout_height="@dimen/dimen_40x"
+        android:layout_marginTop="@dimen/dimen_16x"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="#A1A7AF"
+        android:textSize="@dimen/dimen_14x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvCancel"
+        app:layout_constraintTop_toBottomOf="@+id/tv_introduce" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

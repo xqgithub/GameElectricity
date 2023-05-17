@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F9FE">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24pt"
+            android:layout_height="24pt"
+            android:layout_marginStart="16pt"
+            android:layout_marginTop="58pt"
+            android:src="@drawable/ge_arrow_back_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54pt"
+            android:text="提货成功"
+            android:textColor="#061925"
+            android:textSize="17pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_title">
+
+        <ImageView
+            android:id="@+id/iv001"
+            android:layout_width="124pt"
+            android:layout_height="124pt"
+            android:layout_marginTop="40pt"
+            android:src="@drawable/ic_img_pickgoods"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv002"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20pt"
+            android:text="恭喜您提货成功"
+            android:textColor="#061925"
+            android:textSize="18pt"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv001" />
+
+        <TextView
+            android:id="@+id/tv003"
+            android:layout_width="166pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6pt"
+            android:gravity="center"
+            android:text="我们会在3-5个工作日内发货，
+详情请您关注物流信息噢～"
+            android:textColor="#A1A7AF"
+            android:textSize="12pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv002" />
+
+        <TextView
+            android:id="@+id/tvOrderReview"
+            android:layout_width="180pt"
+            android:layout_height="44pt"
+            android:layout_marginTop="48pt"
+            android:background="@drawable/shape_radius_f19b3f"
+            android:gravity="center"
+            android:text="查看订单"
+            android:textColor="#FFFFFF"
+            android:textSize="14pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv003" />
+
+        <TextView
+            android:id="@+id/tvBackHome"
+            android:layout_width="180pt"
+            android:layout_height="44pt"
+            android:layout_marginTop="16pt"
+            android:background="@drawable/shape_radius_fdede4_5"
+            android:gravity="center"
+            android:text="返回首页"
+            android:textColor="#EF874E"
+            android:textSize="14pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrderReview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

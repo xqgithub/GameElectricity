@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen_16x">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/sivImg"
+        android:layout_width="110pt"
+        android:layout_height="110pt"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iv_pool_empty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="52pt"
+        android:layout_height="18pt"
+        android:layout_marginLeft="12pt"
+        android:background="@drawable/shape_radius_f19b3f_2"
+        android:gravity="center"
+        android:text="明日预告"
+        android:textColor="#FFFFFF"
+        android:visibility="gone"
+        android:textSize="10pt"
+        app:layout_constraintStart_toEndOf="@+id/sivImg"
+        app:layout_constraintTop_toTopOf="@+id/sivImg"
+        app:layout_goneMarginBottom="6pt" />
+
+    <TextView
+        android:id="@+id/tvGoodsName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12pt"
+        android:layout_marginTop="6pt"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="洁柔可湿水面纸"
+        android:textColor="#061925"
+        android:textSize="16pt"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sivImg"
+        app:layout_constraintTop_toBottomOf="@+id/tvType"
+        app:layout_goneMarginTop="0pt" />
+
+    <TextView
+        android:id="@+id/tvDiscountPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12pt"
+        android:layout_marginTop="4pt"
+        android:text="¥5999.0"
+        android:textColor="#EF874E"
+        android:textSize="20pt"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/sivImg"
+        app:layout_constraintTop_toBottomOf="@+id/tvGoodsName"/>
+
+    <TextView
+        android:id="@+id/tvDefaultPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4pt"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="原价 ¥39.99"
+        android:textColor="#A1A7AF"
+        android:textSize="12pt"
+        app:layout_constraintStart_toEndOf="@+id/tvDiscountPrice"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDiscountPrice" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="105pt"
+        android:layout_height="8pt"
+        android:layout_marginLeft="12pt"
+        android:layout_marginTop="16pt"
+        android:max="100"
+        android:progress="35"
+        android:progressDrawable="@drawable/progressbar_preview"
+        app:layout_constraintStart_toEndOf="@+id/sivImg"
+        app:layout_constraintTop_toBottomOf="@+id/tvDefaultPrice" />
+
+    <TextView
+        android:id="@+id/tvNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14pt"
+        android:layout_marginTop="16pt"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="600/10000"
+        android:textColor="#A1A7AF"
+        android:textSize="10pt"
+        app:layout_constraintStart_toEndOf="@+id/progressBar"
+        app:layout_constraintTop_toBottomOf="@+id/tvDefaultPrice" />
+
+
+    <TextView
+        android:id="@+id/tv04"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12pt"
+        android:layout_marginTop="32pt"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="数量有限，发完为止"
+        android:textColor="#A1A7AF"
+        android:textSize="10pt"
+        app:layout_constraintStart_toEndOf="@+id/sivImg"
+        app:layout_constraintTop_toBottomOf="@+id/tvDefaultPrice" />
+
+
+    <TextView
+        android:id="@+id/tvOperate"
+        android:layout_width="180pt"
+        android:layout_height="36pt"
+        android:layout_marginLeft="12pt"
+        android:layout_marginTop="12pt"
+        android:background="@drawable/shape_radius_f19b3f"
+        android:gravity="center"
+        android:text="冲冲冲！"
+        android:textColor="#FFFFFF"
+        android:textSize="14pt"
+        app:layout_constraintStart_toEndOf="@+id/sivImg"
+        app:layout_constraintTop_toBottomOf="@+id/tv04" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

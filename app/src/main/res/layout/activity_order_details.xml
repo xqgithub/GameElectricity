@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F9FE"
+    tools:background="@color/color_4eeac4">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_210x"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/dimen_24x"
+        android:layout_height="@dimen/dimen_24x"
+        android:layout_marginStart="@dimen/dimen_16x"
+        android:layout_marginTop="@dimen/dimen_25x"
+        android:src="@drawable/ge_arrow_back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.sn.gameelectricity.app.weight.customview.MyNestedScrollView
+        android:id="@+id/nsv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_marginTop="@dimen/dimen_14x"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/cl_operate"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_30x"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_pay_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12x"
+                android:layout_marginEnd="@dimen/dimen_12x"
+                android:text="请在 29:12 内支付"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/dimen_16x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi2
+                android:id="@+id/itui_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_12x"
+                android:layout_marginTop="@dimen/dimen_16x"
+                android:paddingVertical="@dimen/dimen_14x"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pay_display"
+                tools:visibility="visible">
+
+                <me.jingbin.library.ByRecyclerView
+                    android:id="@+id/recyclerView_helper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+                    android:id="@+id/itui_help_friend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/itui_help_friend2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+                    android:id="@+id/itui_help_friend2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/itui_help_friend3"
+                    app:layout_constraintStart_toEndOf="@+id/itui_help_friend"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+                    android:id="@+id/itui_help_friend3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/itui_help_friend2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_12x"
+                android:layout_marginTop="@dimen/dimen_8x"
+                app:layout_constraintTop_toBottomOf="@+id/cl_help">
+
+                <ImageView
+                    android:id="@+id/iv_address"
+                    android:layout_width="@dimen/dimen_32x"
+                    android:layout_height="@dimen/dimen_32x"
+                    android:layout_marginStart="@dimen/dimen_12x"
+                    android:layout_marginTop="@dimen/dimen_34x"
+                    android:src="@drawable/ge_order_address"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tv_address_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_4x"
+                    android:paddingHorizontal="@dimen/dimen_4x"
+                    android:paddingVertical="@dimen/dimen_1x"
+                    android:text="默认"
+                    android:textColor="#EF874E"
+                    android:textSize="@dimen/dimen_10x"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/iv_address"
+                    app:layout_constraintStart_toEndOf="@+id/iv_address" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_6x"
+                    android:text="湖北省武汉市洪山区关山街道"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_12x"
+                    app:layout_constraintBottom_toTopOf="@+id/iv_address"
+                    app:layout_constraintStart_toEndOf="@+id/tv_address_default"
+                    app:layout_goneMarginStart="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_address2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_4x"
+                    android:layout_marginTop="@dimen/dimen_4x"
+                    android:text="留学生创业园 C栋 3116"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/iv_address"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+
+                <TextView
+                    android:id="@+id/tv_name_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4x"
+                    android:text="张三 13345678900"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_12x"
+                    app:layout_constraintStart_toStartOf="@+id/tv_address2"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_address2" />
+
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:layout_marginEnd="@dimen/dimen_12x"
+                    android:src="@drawable/ge_nav_arrow_rigth_gray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/group_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="
+                     iv_address,
+                     tv_address_default,
+                     tv_address,
+                     tv_address2,
+                     tv_name_phone,
+                     iv_more" />
+
+                <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi2
+                    android:id="@+id/itui_delivery_address_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_4x"
+                    android:layout_marginTop="@dimen/dimen_34x"
+                    android:layout_marginEnd="@dimen/dimen_7x"
+                    android:src="@drawable/ge_order_line"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_address" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 商品详情 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_product_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8x"
+                android:paddingHorizontal="@dimen/dimen_12x"
+                android:paddingBottom="@dimen/dimen_12x"
+                app:layout_constraintEnd_toEndOf="@+id/cl_address"
+                app:layout_constraintStart_toStartOf="@+id/cl_address"
+                app:layout_constraintTop_toBottomOf="@+id/cl_address">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/siv_img"
+                    android:layout_width="@dimen/dimen_80x"
+                    android:layout_height="@dimen/dimen_80x"
+                    android:layout_marginTop="@dimen/dimen_12x"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_empty"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+
+                <TextView
+                    android:id="@+id/tv_order_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12x"
+                    android:layout_marginEnd="@dimen/dimen_12x"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Apple iPhone 13 Pro Max 256GB粉色256GB粉色"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_order_price"
+                    app:layout_constraintStart_toEndOf="@+id/siv_img"
+                    app:layout_constraintTop_toTopOf="@+id/siv_img" />
+
+                <TextView
+                    android:id="@+id/tv_order_introduce"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4x"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="星光色 | 256g"
+                    android:textColor="#A1A7AF"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_order_name"
+                    app:layout_constraintStart_toStartOf="@+id/tv_order_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_order_name" />
+
+                <TextView
+                    android:id="@+id/tv_order_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_12x"
+                    android:text="¥5000"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_order_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_2x"
+                    android:text="X1"
+                    android:textColor="#A1A7AF"
+                    android:textSize="@dimen/dimen_12x"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_order_price"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_order_price" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 商品总价 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_total_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8x"
+                android:paddingHorizontal="@dimen/dimen_12x"
+                android:paddingVertical="@dimen/dimen_16x"
+                app:layout_constraintEnd_toEndOf="@+id/cl_address"
+                app:layout_constraintStart_toStartOf="@+id/cl_address"
+                app:layout_constraintTop_toBottomOf="@+id/cl_product_info">
+
+                <TextView
+                    android:id="@+id/tv_product_price_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品总价"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥5000"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_product_price_name" />
+
+
+                <TextView
+                    android:id="@+id/tv_freight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32x"
+                    android:text="运费"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintStart_toStartOf="@+id/tv_product_price_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_product_price_name" />
+
+
+                <TextView
+                    android:id="@+id/tv_freight_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥10"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_freight" />
+
+                <View
+                    android:id="@+id/splitline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/dimen_16x"
+                    android:background="#6A7079"
+                    android:visibility="invisible"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_freight" />
+
+
+                <TextView
+                    android:id="@+id/tv_pick_up_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_16x"
+                    android:text="自提地址："
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/tv_product_price_name"
+                    app:layout_constraintTop_toBottomOf="@+id/splitline" />
+
+                <TextView
+                    android:id="@+id/tv_pick_up_address_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="湖北省武汉市江汉区武汉国际广场迪奥专卖店"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintStart_toStartOf="@+id/tv_pick_up_address"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_pick_up_address" />
+
+
+                <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi2
+                    android:id="@+id/itui_gold_consume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_30x"
+                    app:layout_constraintStart_toStartOf="@+id/tv_freight"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_pick_up_address_content" />
+
+                <TextView
+                    android:id="@+id/tv_gold_consume_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10000金币抵扣 ¥1000"
+                    android:textColor="#EF874E"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintBottom_toBottomOf="@+id/itui_gold_consume"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/itui_gold_consume" />
+
+
+                <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi2
+                    android:id="@+id/itui_coupon_consume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_30x"
+                    app:layout_constraintStart_toStartOf="@+id/tv_freight"
+                    app:layout_constraintTop_toBottomOf="@+id/itui_gold_consume" />
+
+                <TextView
+                    android:id="@+id/tv_coupon_consume_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无门槛优惠券 ¥4.5"
+                    android:textColor="#EF874E"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintBottom_toBottomOf="@+id/itui_coupon_consume"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/itui_coupon_consume" />
+
+
+                <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi2
+                    android:id="@+id/itui_scores_consume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_30x"
+                    app:layout_constraintStart_toStartOf="@+id/tv_freight"
+                    app:layout_constraintTop_toBottomOf="@+id/itui_coupon_consume" />
+
+                <TextView
+                    android:id="@+id/tv_scores_consume_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10000"
+                    android:textColor="#EF874E"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintBottom_toBottomOf="@+id/itui_scores_consume"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/itui_scores_consume" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 订单备注 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_order_notes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8x"
+                android:paddingHorizontal="@dimen/dimen_12x"
+                android:paddingVertical="@dimen/dimen_16x"
+                app:layout_constraintEnd_toEndOf="@+id/cl_address"
+                app:layout_constraintStart_toStartOf="@+id/cl_address"
+                app:layout_constraintTop_toBottomOf="@+id/cl_total_price">
+
+                <TextView
+                    android:id="@+id/tv_order_notes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单备注"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_order_notes_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxEms="8"
+                    android:maxLines="1"
+                    android:text="无备注"
+                    android:textColor="#A1A7AF"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_notes_more"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_notes_more"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:src="@drawable/ge_nav_arrow_rigth_gray"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_order_notes_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_order_notes_content"
+                    tools:visibility="visible" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 实付款 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_real_payment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8x"
+                android:paddingHorizontal="@dimen/dimen_12x"
+                android:paddingVertical="@dimen/dimen_16x"
+                app:layout_constraintEnd_toEndOf="@+id/cl_address"
+                app:layout_constraintStart_toStartOf="@+id/cl_address"
+                app:layout_constraintTop_toBottomOf="@+id/cl_order_notes">
+
+                <TextView
+                    android:id="@+id/tv_real_payment_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="实付款"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_real_payment_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥4000"
+                    android:textColor="#EF874E"
+                    android:textSize="@dimen/dimen_14x"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_real_payment_name" />
+
+
+                <TextView
+                    android:id="@+id/tv_order_serial_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32x"
+                    android:text="订单编号:"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintStart_toStartOf="@+id/tv_real_payment_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_real_payment_price"
+                    app:layout_goneMarginTop="0dp" />
+
+                <TextView
+                    android:id="@+id/tv_order_serial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7375658385758375937 | 复制"
+                    android:textColor="#A1A7AF"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_order_serial_name" />
+
+                <TextView
+                    android:id="@+id/tv_order_payment_number_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32x"
+                    android:text="支付单号:"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintStart_toStartOf="@+id/tv_real_payment_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_order_serial_name" />
+
+                <TextView
+                    android:id="@+id/tv_order_payment_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7375658385758375937"
+                    android:textColor="#A1A7AF"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_order_payment_number_name" />
+
+                <TextView
+                    android:id="@+id/tv_order_create_time_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32x"
+                    android:text="创建时间:"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintStart_toStartOf="@+id/tv_real_payment_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_order_payment_number_name" />
+
+                <TextView
+                    android:id="@+id/tv_order_create_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2022-05-06 23:50:12"
+                    android:textColor="#A1A7AF"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_order_create_time_name" />
+
+                <TextView
+                    android:id="@+id/tv_order_payment_time_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32x"
+                    android:text="付款时间:"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintStart_toStartOf="@+id/tv_real_payment_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_order_create_time_name" />
+
+                <TextView
+                    android:id="@+id/tv_order_payment_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2022-05-06 23:50:12"
+                    android:textColor="#A1A7AF"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_order_payment_time_name" />
+
+                <TextView
+                    android:id="@+id/tv_order_delivery_time_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32x"
+                    android:text="发货时间:"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintStart_toStartOf="@+id/tv_real_payment_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_order_payment_time_name" />
+
+                <TextView
+                    android:id="@+id/tv_order_delivery_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2022-05-06 23:50:12"
+                    android:textColor="#A1A7AF"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_order_delivery_time_name" />
+
+                <TextView
+                    android:id="@+id/tv_order_complete_time_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32x"
+                    android:text="完成时间:"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintStart_toStartOf="@+id/tv_real_payment_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_order_delivery_time_name" />
+
+                <TextView
+                    android:id="@+id/tv_order_complete_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2022-05-06 23:50:12"
+                    android:textColor="#A1A7AF"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_order_complete_time_name" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 支付方式 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_payment_method"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8x"
+                android:paddingHorizontal="@dimen/dimen_14x"
+                android:paddingVertical="@dimen/dimen_16x"
+                app:layout_constraintEnd_toEndOf="@+id/cl_address"
+                app:layout_constraintStart_toStartOf="@+id/cl_address"
+                app:layout_constraintTop_toBottomOf="@+id/cl_real_payment">
+
+                <!-- 支付宝支付 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_alipay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_alipay"
+                        android:layout_width="@dimen/dimen_24x"
+                        android:layout_height="@dimen/dimen_24x"
+                        android:layout_marginStart="@dimen/dimen_12x"
+                        android:src="@drawable/ge_zhifubao"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/tv_alipay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_8x"
+                        android:text="支付宝"
+                        android:textColor="#061925"
+                        android:textSize="@dimen/dimen_14x"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_alipay"
+                        app:layout_constraintStart_toEndOf="@+id/iv_alipay"
+                        app:layout_constraintTop_toTopOf="@+id/iv_alipay" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_checkbox_alipay"
+                        android:layout_width="@dimen/dimen_20x"
+                        android:layout_height="@dimen/dimen_20x"
+                        android:layout_marginStart="@dimen/dimen_12x"
+                        android:src="@drawable/ge_unselected"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_alipay"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/iv_alipay" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_union"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_28x"
+                    app:layout_constraintStart_toStartOf="@+id/cl_alipay"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_alipay"
+                    app:layout_goneMarginTop="0dp">
+
+                    <ImageView
+                        android:id="@+id/iv_union"
+                        android:layout_width="@dimen/dimen_24x"
+                        android:layout_height="@dimen/dimen_24x"
+                        android:layout_marginStart="@dimen/dimen_12x"
+                        android:src="@drawable/ge_union"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_union"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_8x"
+                        android:text="微信"
+                        android:textColor="#061925"
+                        android:textSize="@dimen/dimen_14x"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_union"
+                        app:layout_constraintStart_toEndOf="@+id/iv_union"
+                        app:layout_constraintTop_toTopOf="@+id/iv_union" />
+
+                    <ImageView
+                        android:id="@+id/iv_checkbox_union"
+                        android:layout_width="@dimen/dimen_20x"
+                        android:layout_height="@dimen/dimen_20x"
+                        android:layout_marginStart="@dimen/dimen_12x"
+                        android:src="@drawable/ge_unselected"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_union"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_union" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.sn.gameelectricity.app.weight.customview.MyNestedScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_operate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/dimen_6x"
+        android:paddingEnd="@dimen/dimen_20x"
+        android:paddingBottom="@dimen/dimen_20x"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- 操作按钮1 -->
+        <TextView
+            android:id="@+id/tv_order_operate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dimen_29x"
+            android:paddingVertical="@dimen/dimen_8x"
+            android:text="操作按钮1"
+            android:textColor="#6A7079"
+            android:textSize="@dimen/dimen_12x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 操作按钮2 -->
+        <TextView
+            android:id="@+id/tv_order_operate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_8x"
+            android:paddingHorizontal="@dimen/dimen_29x"
+            android:paddingVertical="@dimen/dimen_8x"
+            android:text="操作按钮2"
+            android:textColor="#6A7079"
+            android:textSize="@dimen/dimen_12x"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_order_operate"
+            app:layout_constraintEnd_toStartOf="@+id/tv_order_operate"
+            app:layout_constraintTop_toTopOf="@+id/tv_order_operate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- 错误提示页面 -->
+    <com.sn.gameelectricity.app.weight.customview.ErrorPageView
+        android:id="@+id/errorpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

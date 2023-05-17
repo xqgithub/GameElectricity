@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialog"
+    android:layout_width="@dimen/dimen_260x"
+    android:layout_height="@dimen/dimen_368x"
+    android:background="@drawable/ge_money_reward_coins">
+
+    <ImageView
+        android:id="@+id/iv_my_gold"
+        android:layout_width="@dimen/dimen_66x"
+        android:layout_height="@dimen/dimen_66x"
+        android:layout_marginTop="@dimen/dimen_130x"
+        android:src="@drawable/ge_me_gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_my_gold_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_6x"
+        android:text="金币 2310"
+        android:textColor="#57493B"
+        android:textSize="@dimen/dimen_14x"
+        app:layout_constraintEnd_toEndOf="@+id/iv_my_gold"
+        app:layout_constraintStart_toStartOf="@+id/iv_my_gold"
+        app:layout_constraintTop_toBottomOf="@+id/iv_my_gold" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_50x"
+        android:layout_marginTop="@dimen/dimen_6x"
+        android:gravity="center"
+        android:text="可以去兑换为你精心准备的超值礼物啦！"
+        android:textColor="#57493B"
+        android:textSize="@dimen/dimen_16x"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_my_gold_num" />
+
+    <TextView
+        android:id="@+id/tvSure"
+        android:layout_width="@dimen/dimen_140x"
+        android:layout_height="@dimen/dimen_40x"
+        android:layout_marginTop="@dimen/dimen_19x"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/dimen_14x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

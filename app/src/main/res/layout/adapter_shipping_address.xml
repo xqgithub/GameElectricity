@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dimen_20x">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_16x"
+        android:paddingEnd="@dimen/dimen_20x"
+        android:paddingBottom="@dimen/dimen_16x">
+
+        <TextView
+            android:id="@+id/tv_address_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dimen_4x"
+            android:paddingVertical="@dimen/dimen_1x"
+            android:text="默认"
+            android:textColor="#EF874E"
+            android:textSize="@dimen/dimen_10x"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_name_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_name_phone" />
+
+        <TextView
+            android:id="@+id/tv_name_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_6x"
+            android:text="张三 13345678900"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_16x"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_address_default"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginStart="0dp" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_6x"
+            android:layout_marginEnd="@dimen/dimen_16x"
+            android:text="湖北省 武汉市 洪山区 关东街道留学生创业园 C栋 3116"
+            android:textColor="#6A7079"
+            android:textSize="@dimen/dimen_14x"
+            app:layout_constraintEnd_toStartOf="@+id/iv_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_phone" />
+
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="@dimen/dimen_32x"
+            android:layout_height="@dimen/dimen_32x"
+            android:src="@drawable/ge_shippingaddress_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 以下都是侧滑菜单的内容依序排列 -->
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="@dimen/dimen_88x"
+        android:layout_height="match_parent"
+        android:background="#F85542"
+        android:text="删除"
+        android:textColor="@android:color/white" />
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

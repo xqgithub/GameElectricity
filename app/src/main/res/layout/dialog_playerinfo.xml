@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_36x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_12x"
+            android:paddingHorizontal="@dimen/dimen_20x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_40x"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Cameron Williamson"
+                android:textColor="#061925"
+                android:textSize="@dimen/dimen_18x"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvEquityNumsIntroduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4x"
+                android:text="权益物品总数："
+                android:textColor="#061925"
+                android:textSize="@dimen/dimen_14x"
+                app:layout_constraintBottom_toBottomOf="@+id/tvEquityNums"
+                app:layout_constraintStart_toStartOf="@+id/tvName"
+                app:layout_constraintTop_toTopOf="@+id/tvEquityNums" />
+
+            <TextView
+                android:id="@+id/tvEquityNums"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#EF874E"
+                android:textSize="@dimen/dimen_24x"
+                app:layout_constraintStart_toEndOf="@+id/tvEquityNumsIntroduce"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <ImageView
+                android:id="@+id/ivRank"
+                android:layout_width="@dimen/dimen_40x"
+                android:layout_height="@dimen/dimen_40x"
+                android:src="@drawable/ge_leaderboard_rank_more"
+                app:layout_constraintBottom_toBottomOf="@+id/tvEquityNums"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvName" />
+
+            <TextView
+                android:id="@+id/tvRank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8x"
+                android:text="100"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/dimen_13x"
+                app:layout_constraintBottom_toBottomOf="@+id/ivRank"
+                app:layout_constraintEnd_toEndOf="@+id/ivRank"
+                app:layout_constraintStart_toStartOf="@+id/ivRank"
+                app:layout_constraintTop_toTopOf="@+id/ivRank" />
+
+            <me.jingbin.library.ByRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dimen_20x"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEquityNums" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_title"
+        android:layout_width="@dimen/dimen_78x"
+        android:layout_height="@dimen/dimen_78x"
+        android:layout_marginTop="@dimen/dimen_3x"
+        android:src="@drawable/default_user_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/circleStyle"
+        app:strokeColor="#ffffff"
+        app:strokeWidth="@dimen/dimen_1x" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dimen_40x"
+        android:layout_height="@dimen/dimen_40x"
+        android:layout_marginEnd="@dimen/dimen_4x"
+        android:src="@drawable/ge_leaderboard_dialog_close"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

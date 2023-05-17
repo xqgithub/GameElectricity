@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_pag_halo"
+        android:layout_width="@dimen/dimen_64x"
+        android:layout_height="@dimen/dimen_64x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="@dimen/dimen_64x"
+            android:layout_height="@dimen/dimen_64x"
+            android:src="@drawable/ge_money_sun_bg"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_task_status"
+        android:layout_width="@dimen/dimen_34x"
+        android:layout_height="@dimen/dimen_34x"
+        android:src="@drawable/ge_money_food"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_40x"
+        android:background="@drawable/ic_ge_money_text_bg"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/dimen_6x"
+        android:text="999999g"
+        android:textColor="#864F17"
+        android:textSize="@dimen/dimen_10x"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

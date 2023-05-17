@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <View
+        android:id="@+id/v_splitline"
+        android:layout_width="@dimen/dimen_1x"
+        android:layout_height="0dp"
+        android:background="#CED3DE"
+        app:layout_constraintBottom_toTopOf="@+id/iv_dots"
+        app:layout_constraintEnd_toEndOf="@+id/iv_dots"
+        app:layout_constraintStart_toStartOf="@+id/iv_dots"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_splitline2"
+        android:layout_width="@dimen/dimen_1x"
+        android:layout_height="0dp"
+        android:background="#CED3DE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_dots"
+        app:layout_constraintStart_toStartOf="@+id/iv_dots"
+        app:layout_constraintTop_toBottomOf="@+id/iv_dots" />
+
+    <ImageView
+        android:id="@+id/iv_dots"
+        android:layout_width="@dimen/dimen_9x"
+        android:layout_height="@dimen/dimen_9x"
+        android:layout_marginStart="@dimen/dimen_29x"
+        android:layout_marginTop="@dimen/dimen_18x"
+        android:src="@drawable/ge_dots_runing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_shipping_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_18x"
+        android:text="运输中"
+        android:textColor="#EF874E"
+        android:textSize="@dimen/dimen_16x"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_dots"
+        app:layout_constraintStart_toEndOf="@+id/iv_dots"
+        app:layout_constraintTop_toTopOf="@+id/iv_dots" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_4x"
+        android:text="运输中"
+        android:textColor="#EF874E"
+        android:textSize="@dimen/dimen_12x"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_shipping_status"
+        app:layout_constraintStart_toEndOf="@+id/tv_shipping_status"
+        app:layout_constraintTop_toTopOf="@+id/tv_shipping_status"
+        app:layout_goneMarginStart="@dimen/dimen_18x" />
+
+    <TextView
+        android:id="@+id/tv_shipping_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4x"
+        android:layout_marginEnd="@dimen/dimen_20x"
+        android:text="运输中"
+        android:textColor="#061925"
+        android:textSize="@dimen/dimen_12x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_shipping_status"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time"
+        app:layout_goneMarginStart="@dimen/dimen_18x" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

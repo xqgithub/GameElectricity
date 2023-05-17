@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.sn.gameelectricity.app.weight.customview.MyNestedScrollView
+        android:id="@+id/nsv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_bg"
+                android:layout_width="match_parent"
+                android:layout_height="770dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ge_money_bg"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_stroll"
+                android:layout_width="@dimen/dimen_170x"
+                android:layout_height="@dimen/dimen_170x"
+                android:layout_marginStart="@dimen/dimen_20x"
+                android:layout_marginTop="@dimen/dimen_125x"
+                android:src="@drawable/ge_money_stroll"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/iv_cloud"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_170x"
+                android:layout_marginTop="@dimen/dimen_98x"
+                android:scaleType="fitXY"
+                android:src="@drawable/ge_money_cloud"
+                app:layout_constraintEnd_toEndOf="@+id/iv_stroll"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_continued"
+                android:layout_width="@dimen/dimen_40x"
+                android:layout_height="@dimen/dimen_40x"
+                android:layout_marginTop="@dimen/dimen_40x"
+                android:src="@drawable/ge_money_continued"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_cloud"
+                app:layout_constraintEnd_toEndOf="@+id/iv_cloud"
+                app:layout_constraintStart_toStartOf="@+id/iv_cloud"
+                app:layout_constraintTop_toTopOf="@+id/iv_cloud" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_mother_baby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_25x"
+                android:layout_marginEnd="@dimen/dimen_27x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_stroll">
+
+                <ImageView
+                    android:id="@+id/iv_mother_baby"
+                    android:layout_width="@dimen/dimen_170x"
+                    android:layout_height="@dimen/dimen_170x"
+                    android:layout_marginTop="@dimen/dimen_35x"
+                    android:src="@drawable/ge_money_mother_baby"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi3
+                    android:id="@+id/itui_mother_baby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+
+                <com.sn.gameelectricity.app.weight.customview.CountdownProgressBar
+                    android:id="@+id/pb_mother_baby"
+                    android:layout_width="@dimen/dimen_100x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:layout_marginTop="@dimen/dimen_25x"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_makeups"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8x"
+                android:layout_marginTop="@dimen/dimen_153x"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_stroll">
+
+                <ImageView
+                    android:id="@+id/iv_makeups"
+                    android:layout_width="@dimen/dimen_170x"
+                    android:layout_height="@dimen/dimen_170x"
+                    android:layout_marginTop="@dimen/dimen_35x"
+                    android:src="@drawable/ge_money_makeups"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi3
+                    android:id="@+id/itui_makeups"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+
+                <com.sn.gameelectricity.app.weight.customview.CountdownProgressBar
+                    android:id="@+id/pb_makeups"
+                    android:layout_width="@dimen/dimen_100x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:layout_marginTop="@dimen/dimen_25x"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_tent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_makeups">
+
+                <ImageView
+                    android:id="@+id/iv_tent"
+                    android:layout_width="115dp"
+                    android:layout_height="117dp"
+                    android:layout_marginStart="-43dp"
+                    android:layout_marginTop="@dimen/dimen_8x"
+                    android:src="@drawable/ge_money_tent" />
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_digital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_328x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_digital"
+                    android:layout_width="@dimen/dimen_170x"
+                    android:layout_height="@dimen/dimen_170x"
+                    android:layout_marginTop="@dimen/dimen_18x"
+                    android:src="@drawable/ge_money_digital"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi3
+                    android:id="@+id/itui_digital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+
+                <com.sn.gameelectricity.app.weight.customview.CountdownProgressBar
+                    android:id="@+id/pb_digital"
+                    android:layout_width="@dimen/dimen_100x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:layout_marginTop="@dimen/dimen_5x"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_leisure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10x"
+                android:layout_marginEnd="@dimen/dimen_70x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_makeups">
+
+                <ImageView
+                    android:id="@+id/iv_leisure"
+                    android:layout_width="@dimen/dimen_170x"
+                    android:layout_height="@dimen/dimen_170x"
+                    android:layout_marginTop="@dimen/dimen_38x"
+                    android:src="@drawable/ge_money_leisure"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi3
+                    android:id="@+id/itui_leisure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_20x"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+
+                <com.sn.gameelectricity.app.weight.customview.CountdownProgressBar
+                    android:id="@+id/pb_leisure"
+                    android:layout_width="@dimen/dimen_100x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:layout_marginTop="@dimen/dimen_25x"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_internal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_placeholder4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_user_bg2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/siv_avatar2"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_placeholder3"
+                    app:layout_constraintStart_toStartOf="@+id/siv_avatar2"
+                    app:layout_constraintTop_toTopOf="@+id/siv_avatar2" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/siv_avatar2"
+                    android:layout_width="@dimen/dimen_52x"
+                    android:layout_height="@dimen/dimen_52x"
+                    android:layout_marginStart="@dimen/dimen_16x"
+                    android:layout_marginTop="@dimen/dimen_22x"
+                    android:padding="@dimen/dimen_2x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_placeholder4"
+                    app:shapeAppearance="@style/circleStyle"
+                    app:srcCompat="@drawable/default_user_icon"
+                    app:strokeColor="#ffffff"
+                    app:strokeWidth="@dimen/dimen_2x" />
+
+                <TextView
+                    android:id="@+id/tv_usernickname2"
+                    android:layout_width="@dimen/dimen_90x"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_8x"
+                    android:layout_marginTop="@dimen/dimen_8x"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="玩家昵称最多玩家昵称最多"
+                    android:textColor="#233556"
+                    android:textSize="@dimen/dimen_12x"
+                    app:layout_constraintStart_toEndOf="@+id/siv_avatar2"
+                    app:layout_constraintTop_toTopOf="@+id/siv_avatar2" />
+
+                <TextView
+                    android:id="@+id/tv_level2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_3x"
+                    android:background="@drawable/ge_money_level_bg"
+                    android:paddingHorizontal="@dimen/dimen_6x"
+                    android:text="Lv.1"
+                    android:textColor="#233556"
+                    android:textSize="@dimen/dimen_12x"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_usernickname2"
+                    app:layout_constraintStart_toEndOf="@+id/tv_usernickname2"
+                    app:layout_constraintTop_toTopOf="@+id/tv_usernickname2" />
+
+                <TextView
+                    android:id="@+id/tv_placeholder3"
+                    android:layout_width="@dimen/dimen_25x"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/dimen_6x"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_usernickname2"
+                    app:layout_constraintStart_toEndOf="@+id/tv_level2"
+                    app:layout_constraintTop_toTopOf="@+id/tv_usernickname2" />
+
+
+                <ImageView
+                    android:id="@+id/iv_my_gold2"
+                    android:layout_width="@dimen/dimen_20x"
+                    android:layout_height="@dimen/dimen_20x"
+                    android:layout_marginTop="@dimen/dimen_4x"
+                    android:src="@drawable/ge_me_gold"
+                    app:layout_constraintStart_toStartOf="@+id/tv_usernickname2"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_usernickname2" />
+
+                <TextView
+                    android:id="@+id/tv_my_gold_num2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_4x"
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:text="9999k"
+                    android:textColor="#233556"
+                    android:textSize="@dimen/dimen_18x"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_my_gold2"
+                    app:layout_constraintStart_toEndOf="@+id/iv_my_gold2"
+                    app:layout_constraintTop_toTopOf="@+id/iv_my_gold2" />
+
+
+                <TextView
+                    android:id="@+id/tv_exchange2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12x"
+                    android:paddingHorizontal="@dimen/dimen_8x"
+                    android:paddingVertical="@dimen/dimen_2x"
+                    android:text="去兑换"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/dimen_12x"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_my_gold_num2"
+                    app:layout_constraintStart_toEndOf="@+id/tv_my_gold_num2"
+                    app:layout_constraintTop_toTopOf="@+id/tv_my_gold_num2" />
+
+
+                <ImageView
+                    android:id="@+id/iv_dress2"
+                    android:layout_width="@dimen/dimen_44x"
+                    android:layout_height="@dimen/dimen_48x"
+                    android:layout_marginTop="@dimen/dimen_25x"
+                    android:layout_marginEnd="@dimen/dimen_20x"
+                    android:src="@drawable/ge_money_dress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/siv_avatar2" />
+
+
+                <ImageView
+                    android:id="@+id/iv_paradise2"
+                    android:layout_width="@dimen/dimen_44x"
+                    android:layout_height="@dimen/dimen_48x"
+                    android:layout_marginTop="@dimen/dimen_8x"
+                    android:src="@drawable/ge_money_paradise"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_dress2"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_dress2" />
+
+
+                <ImageView
+                    android:id="@+id/iv_dynamic2"
+                    android:layout_width="@dimen/dimen_44x"
+                    android:layout_height="@dimen/dimen_48x"
+                    android:layout_marginTop="@dimen/dimen_8x"
+                    android:src="@drawable/ge_money_dynamic"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_dress2"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_paradise2" />
+
+
+                <ImageView
+                    android:id="@+id/iv_friend2"
+                    android:layout_width="@dimen/dimen_44x"
+                    android:layout_height="@dimen/dimen_48x"
+                    android:layout_marginTop="@dimen/dimen_8x"
+                    android:src="@drawable/ge_money_friend"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_dress2"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_dynamic2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_mask_layer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#CC000000"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_goose"
+                android:layout_width="@dimen/dimen_125x"
+                android:layout_height="@dimen/dimen_125x"
+                android:layout_marginStart="@dimen/dimen_15x"
+                android:layout_marginTop="@dimen/dimen_40x"
+                android:src="@drawable/ge_money_goose"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_makeups" />
+
+
+            <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi3
+                android:id="@+id/itui_feeding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_120x"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_goose"
+                app:layout_constraintEnd_toEndOf="@+id/iv_goose"
+                app:layout_constraintStart_toStartOf="@+id/iv_goose"
+                tools:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl_pag_finger"
+                android:layout_width="@dimen/dimen_44x"
+                android:layout_height="@dimen/dimen_44x"
+                android:layout_marginBottom="@dimen/dimen_100x"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_goose"
+                app:layout_constraintEnd_toEndOf="@+id/iv_goose" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.sn.gameelectricity.app.weight.customview.MyNestedScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_external"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_placeholder2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 玩家信息 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_user_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16x"
+            android:layout_marginTop="@dimen/dimen_22x"
+            android:paddingEnd="@dimen/dimen_14x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_placeholder2">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_avatar"
+                android:layout_width="@dimen/dimen_52x"
+                android:layout_height="@dimen/dimen_52x"
+                android:padding="@dimen/dimen_2x"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/circleStyle"
+                app:srcCompat="@drawable/default_user_icon"
+                app:strokeColor="#ffffff"
+                app:strokeWidth="@dimen/dimen_2x" />
+
+            <TextView
+                android:id="@+id/tv_usernickname"
+                android:layout_width="@dimen/dimen_90x"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8x"
+                android:layout_marginTop="@dimen/dimen_5x"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="玩家昵称最多玩家昵称最多"
+                android:textColor="#233556"
+                android:textSize="@dimen/dimen_12x"
+                app:layout_constraintStart_toEndOf="@+id/siv_avatar"
+                app:layout_constraintTop_toTopOf="@+id/siv_avatar" />
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_3x"
+                android:background="@drawable/ge_money_level_bg"
+                android:paddingStart="@dimen/dimen_4x"
+                android:paddingEnd="@dimen/dimen_9x"
+                android:text="Lv.1"
+                android:textColor="#EF874E"
+                android:textSize="@dimen/dimen_12x"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_usernickname"
+                app:layout_constraintStart_toEndOf="@+id/tv_usernickname"
+                app:layout_constraintTop_toTopOf="@+id/tv_usernickname" />
+
+            <ImageView
+                android:id="@+id/iv_my_gold"
+                android:layout_width="@dimen/dimen_20x"
+                android:layout_height="@dimen/dimen_20x"
+                android:src="@drawable/ge_me_gold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_my_gold_num"
+                app:layout_constraintStart_toStartOf="@+id/tv_usernickname"
+                app:layout_constraintTop_toTopOf="@+id/tv_my_gold_num" />
+
+            <TextView
+                android:id="@+id/tv_my_gold_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4x"
+                android:layout_marginTop="@dimen/dimen_3x"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:text="9999k"
+                android:textColor="#233556"
+                android:textSize="@dimen/dimen_18x"
+                app:layout_constraintStart_toEndOf="@+id/iv_my_gold"
+                app:layout_constraintTop_toBottomOf="@+id/tv_usernickname" />
+
+
+            <TextView
+                android:id="@+id/tv_exchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12x"
+                android:paddingHorizontal="@dimen/dimen_8x"
+                android:paddingVertical="@dimen/dimen_2x"
+                android:text="去兑换"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/dimen_12x"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_my_gold_num"
+                app:layout_constraintStart_toEndOf="@+id/tv_my_gold_num"
+                app:layout_constraintTop_toTopOf="@+id/tv_my_gold_num" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- 排行榜信息 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clLeaderboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_5x"
+            android:layout_marginTop="@dimen/dimen_18x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_user_bg">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/sivBellwether"
+                android:layout_width="@dimen/dimen_44x"
+                android:layout_height="@dimen/dimen_44x"
+                app:layout_constraintBottom_toBottomOf="@+id/ivLeaderboardBg"
+                app:layout_constraintEnd_toEndOf="@+id/ivLeaderboardBg"
+                app:layout_constraintStart_toStartOf="@+id/ivLeaderboardBg"
+                app:layout_constraintTop_toTopOf="@+id/ivLeaderboardBg"
+                app:shapeAppearance="@style/circleStyle"
+                app:srcCompat="@drawable/ge_leaderboard_default_avatar" />
+
+            <ImageView
+                android:id="@+id/ivLeaderboardBg"
+                android:layout_width="@dimen/dimen_74x"
+                android:layout_height="@dimen/dimen_74x"
+                android:src="@drawable/ge_leaderboard_avatar_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvLeaderboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_9x"
+                android:background="@drawable/shape_radius12_fdbf00"
+                android:paddingHorizontal="@dimen/dimen_6x"
+                android:paddingVertical="@dimen/dimen_1x"
+                android:text="排行榜"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_9x"
+                app:layout_constraintBottom_toBottomOf="@+id/ivLeaderboardBg"
+                app:layout_constraintEnd_toEndOf="@+id/ivLeaderboardBg"
+                app:layout_constraintStart_toStartOf="@+id/ivLeaderboardBg" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_dress"
+            android:layout_width="@dimen/dimen_44x"
+            android:layout_height="@dimen/dimen_48x"
+            android:layout_marginTop="@dimen/dimen_25x"
+            android:layout_marginEnd="@dimen/dimen_20x"
+            android:src="@drawable/ge_money_dress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cl_user_bg" />
+
+
+        <ImageView
+            android:id="@+id/iv_paradise"
+            android:layout_width="@dimen/dimen_44x"
+            android:layout_height="@dimen/dimen_48x"
+            android:layout_marginTop="@dimen/dimen_8x"
+            android:src="@drawable/ge_money_paradise"
+            app:layout_constraintEnd_toEndOf="@+id/iv_dress"
+            app:layout_constraintTop_toBottomOf="@+id/iv_dress" />
+
+
+        <ImageView
+            android:id="@+id/iv_dynamic"
+            android:layout_width="@dimen/dimen_44x"
+            android:layout_height="@dimen/dimen_48x"
+            android:layout_marginTop="@dimen/dimen_8x"
+            android:src="@drawable/ge_money_dynamic"
+            app:layout_constraintEnd_toEndOf="@+id/iv_dress"
+            app:layout_constraintTop_toBottomOf="@+id/iv_paradise" />
+
+
+        <ImageView
+            android:id="@+id/iv_friend"
+            android:layout_width="@dimen/dimen_44x"
+            android:layout_height="@dimen/dimen_48x"
+            android:layout_marginTop="@dimen/dimen_8x"
+            android:src="@drawable/ge_money_friend"
+            app:layout_constraintEnd_toEndOf="@+id/iv_dress"
+            app:layout_constraintTop_toBottomOf="@+id/iv_dynamic" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi3
+        android:id="@+id/itui_gold_coin_recycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

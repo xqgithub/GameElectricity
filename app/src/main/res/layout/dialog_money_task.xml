@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/dimen_156x"
+            android:layout_height="@dimen/dimen_64x"
+            android:scaleType="fitXY"
+            android:src="@drawable/ge_top_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15x"
+            android:background="@drawable/ge_dialog_bg"
+            android:paddingHorizontal="@dimen/dimen_12x"
+            android:paddingVertical="@dimen/dimen_20x"
+            app:layout_constraintTop_toBottomOf="@+id/iv_icon">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/siv_task"
+                    android:layout_width="@dimen/dimen_90x"
+                    android:layout_height="@dimen/dimen_90x"
+                    android:layout_marginTop="@dimen/dimen_10x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ge_money_placeholder" />
+
+                <TextView
+                    android:id="@+id/tv_prizes_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/dimen_20x"
+                    android:paddingVertical="@dimen/dimen_2x"
+                    android:text="x 1"
+                    android:textColor="#EF874E"
+                    android:textSize="@dimen/dimen_10x"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/siv_task"
+                    app:layout_constraintStart_toStartOf="@+id/siv_task"
+                    app:layout_constraintTop_toBottomOf="@+id/siv_task" />
+
+
+                <TextView
+                    android:id="@+id/tv_title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_20x"
+                    android:layout_marginTop="@dimen/dimen_12x"
+                    android:gravity="center"
+                    android:text="美妆任务"
+                    android:textColor="#57493B"
+                    android:textSize="@dimen/dimen_16x"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_prizes_number" />
+
+
+                <TextView
+                    android:id="@+id/tv_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4x"
+                    android:gravity="center"
+                    android:text="开启扭蛋（ 0/1 ）"
+                    android:textColor="#A1A7AF"
+                    android:textSize="@dimen/dimen_12x"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_title2"
+                    app:layout_constraintStart_toStartOf="@+id/tv_title2"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title2" />
+
+
+                <com.sn.gameelectricity.app.weight.customview.CountdownProgressBar
+                    android:id="@+id/pb_countdown"
+                    android:layout_width="@dimen/dimen_187x"
+                    android:layout_height="@dimen/dimen_18x"
+                    android:layout_marginTop="@dimen/dimen_4x"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_title2"
+                    app:layout_constraintStart_toStartOf="@+id/tv_title2"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title2" />
+
+                <!--                <com.sn.gameelectricity.app.weight.customview.AlignTextView-->
+                <!--                    android:id="@+id/atv_introduce"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginHorizontal="@dimen/dimen_20x"-->
+                <!--                    android:layout_marginTop="@dimen/dimen_30x"-->
+                <!--                    android:lineSpacingExtra="@dimen/dimen_5x"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/tv_title2" />-->
+
+                <TextView
+                    android:id="@+id/atv_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_20x"
+                    android:layout_marginTop="@dimen/dimen_30x"
+                    android:lineSpacingExtra="@dimen/dimen_5x"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title2" />
+
+
+                <TextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_16x"
+                    android:layout_marginEnd="@dimen/dimen_10x"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/dimen_30x"
+                    android:paddingVertical="@dimen/dimen_10x"
+                    android:text="换一换"
+                    android:textColor="#A1A7AF"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSure"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="@+id/atv_introduce"
+                    app:layout_constraintTop_toBottomOf="@+id/atv_introduce" />
+
+                <TextView
+                    android:id="@+id/tvSure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_16x"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/dimen_45x"
+                    android:paddingVertical="@dimen/dimen_10x"
+                    android:text="开始"
+                    android:textColor="#A1A7AF"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintEnd_toEndOf="@+id/atv_introduce"
+                    app:layout_constraintStart_toEndOf="@+id/tvCancel"
+                    app:layout_constraintTop_toBottomOf="@+id/atv_introduce" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="@dimen/dimen_156x"
+            android:layout_height="@dimen/dimen_35x"
+            android:background="@drawable/ic_ge_money_dialog_title_bg"
+            android:gravity="top|center"
+            android:paddingHorizontal="@dimen/dimen_42x"
+            android:paddingVertical="@dimen/dimen_3x"
+            android:text="美妆任务"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/dimen_16x"
+            app:layout_constraintEnd_toEndOf="@+id/iv_icon"
+            app:layout_constraintStart_toStartOf="@+id/iv_icon"
+            app:layout_constraintTop_toBottomOf="@+id/iv_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dimen_40x"
+        android:layout_height="@dimen/dimen_40x"
+        android:layout_marginTop="@dimen/dimen_45x"
+        android:padding="@dimen/dimen_5x"
+        android:src="@drawable/ge_money_dialog_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_main_content" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

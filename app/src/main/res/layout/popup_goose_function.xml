@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="@dimen/dimen_150x"
+    android:layout_height="@dimen/dimen_100x">
+
+
+    <ImageView
+        android:id="@+id/iv_feed"
+        android:layout_width="@dimen/dimen_44x"
+        android:layout_height="@dimen/dimen_48x"
+        android:src="@drawable/ge_money_feed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_egg_collection"
+        android:layout_width="@dimen/dimen_44x"
+        android:layout_height="@dimen/dimen_48x"
+        android:layout_marginStart="@dimen/dimen_40x"
+        android:layout_marginTop="@dimen/dimen_35x"
+        android:src="@drawable/ge_money_egg_collection"
+        app:layout_constraintStart_toEndOf="@+id/iv_feed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

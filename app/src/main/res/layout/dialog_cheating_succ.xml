@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="240pt"
+        android:layout_height="238pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:layout_width="240pt"
+            android:layout_height="156pt"
+            android:layout_marginTop="34pt"
+            android:background="@drawable/ic_pup_img_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv01"
+            android:layout_width="50pt"
+            android:layout_height="34pt"
+            android:background="@drawable/icon_dialog_top2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="192pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24pt"
+            android:gravity="center"
+            android:text="助力成功"
+            android:textColor="#EF874E"
+            android:textSize="18pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv01" />
+
+        <TextView
+            android:id="@+id/tvContent2"
+            android:layout_width="192pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8pt"
+            android:gravity="center"
+            android:text="您的好友已获得半价购资格～"
+            android:textColor="#57493B"
+            android:textSize="13pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContent" />
+
+        <Button
+            android:id="@+id/btnSure"
+            android:layout_width="192pt"
+            android:layout_height="40pt"
+            android:layout_marginTop="16pt"
+            android:background="@drawable/shape_radius_f19b3f"
+            android:text="我也要半价购"
+            android:textColor="#FFFFFF"
+            android:textSize="14pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContent2" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="28pt"
+            android:layout_height="28pt"
+            android:layout_gravity="center"
+            android:layout_marginTop="20pt"
+            android:src="@drawable/ic_nav_close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

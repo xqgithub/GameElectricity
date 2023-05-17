@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_100x"
+        android:src="@drawable/vip_bg_failed" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_19x"
+        android:text="@string/load_fail"
+        android:textColor="@color/gray_f888"
+        android:textSize="@dimen/dimen_15x" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_webview_error_reload"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="@dimen/dp32"-->
+    <!--        android:layout_marginTop="@dimen/dp50"-->
+    <!--        android:background="@drawable/bg_webview_loadfail_button"-->
+    <!--        android:paddingLeft="@dimen/dp20"-->
+    <!--        android:paddingRight="@dimen/dp20"-->
+    <!--        android:text="@string/reload"-->
+    <!--        android:textColor="@color/theme_color"-->
+    <!--        android:textSize="16sp" />-->
+</LinearLayout>

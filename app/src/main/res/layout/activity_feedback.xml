@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dimen_10x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dimen_24x"
+            android:layout_height="@dimen/dimen_24x"
+            android:layout_marginStart="@dimen/dimen_16x"
+            android:layout_marginTop="@dimen/dimen_25x"
+            android:src="@drawable/ge_arrow_back_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="意见反馈"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_17x"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_back" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16x"
+        android:layout_marginTop="@dimen/dimen_24x"
+        android:text="所属分类"
+        android:textColor="#111111"
+        android:textSize="@dimen/dimen_16x"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_title" />
+
+    <com.sn.gameelectricity.app.weight.customview.LabelsView
+        android:id="@+id/labels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10x"
+        android:minWidth="@dimen/dimen_108x"
+        android:minHeight="@dimen/dimen_32x"
+        android:padding="@dimen/dimen_10x"
+        app:labelBackground="@drawable/label_bg3"
+        app:labelGravity="center"
+        app:labelTextColor="@drawable/label_text_color3"
+        app:labelTextHeight="wrap_content"
+        app:labelTextPaddingBottom="@dimen/dimen_8x"
+        app:labelTextPaddingLeft="@dimen/dimen_20x"
+        app:labelTextPaddingRight="@dimen/dimen_20x"
+        app:labelTextPaddingTop="@dimen/dimen_8x"
+        app:labelTextSize="@dimen/dimen_12x"
+        app:labelTextWidth="@dimen/dimen_108x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1"
+        app:lineMargin="@dimen/dimen_10x" />
+
+    <EditText
+        android:id="@+id/etIdea"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_200x"
+        android:layout_marginHorizontal="@dimen/dimen_15x"
+        android:layout_marginTop="@dimen/dimen_14x"
+        android:background="@drawable/bg_group_intro"
+        android:gravity="left"
+        android:hint="请写下您的反馈和建议，非常感谢..."
+        android:maxLength="300"
+        android:paddingVertical="@dimen/dimen_10x"
+        android:textColor="#111111"
+        android:textColorHint="#999999"
+        android:textSize="@dimen/dimen_14x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/labels"
+        app:layout_constraintTop_toBottomOf="@+id/labels" />
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_48x"
+        android:layout_marginHorizontal="@dimen/dimen_20x"
+        android:layout_marginBottom="@dimen/dimen_30x"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/dimen_16x"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

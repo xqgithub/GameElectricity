@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_title_top">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_12x"
+            android:paddingHorizontal="@dimen/dimen_12x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_friend_enemy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_28x"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_friend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_3x"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/dimen_16x"
+                    android:paddingVertical="@dimen/dimen_8x"
+                    android:text="好友"
+                    android:textColor="#233556"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_enemy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_3x"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/dimen_16x"
+                    android:paddingVertical="@dimen/dimen_8x"
+                    android:text="仇人"
+                    android:textColor="#233556"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_friend"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.sn.gameelectricity.app.weight.customview.TextAndTextUi
+                android:id="@+id/tat_contribution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_friend_enemy"
+                app:layout_constraintEnd_toStartOf="@+id/iv_more"
+                app:layout_constraintTop_toTopOf="@+id/cl_friend_enemy"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="@dimen/dimen_24x"
+                android:layout_height="@dimen/dimen_24x"
+                android:src="@drawable/ge_game_more"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/tat_contribution"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tat_contribution"
+                tools:visibility="visible" />
+
+
+            <me.jingbin.library.ByRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dimen_12x"
+                android:layout_marginBottom="@dimen/dimen_6x"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toTopOf="@+id/cl_share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_friend_enemy" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_share"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_48x"
+                android:layout_marginHorizontal="@dimen/dimen_5x"
+                android:layout_marginBottom="@dimen/dimen_10x"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi2
+                    android:id="@+id/itui_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_title_top"
+        android:layout_width="@dimen/dimen_200x"
+        android:layout_height="@dimen/dimen_80x"
+        android:scaleType="fitXY"
+        android:src="@drawable/ge_money_dialog_title_animal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="@dimen/dimen_120x"
+        android:layout_height="@dimen/dimen_36x"
+        android:layout_marginTop="@dimen/dimen_72x"
+        android:src="@drawable/ge_money_dialog_title_friend"
+        app:layout_constraintEnd_toEndOf="@+id/iv_title_top"
+        app:layout_constraintStart_toStartOf="@+id/iv_title_top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dimen_40x"
+        android:layout_height="@dimen/dimen_40x"
+        android:layout_marginEnd="@dimen/dimen_4x"
+        android:src="@drawable/ge_money_dialog_close"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_title" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

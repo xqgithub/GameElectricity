@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivBg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_360x"
+        android:scaleType="fitXY"
+        android:src="@drawable/ge_leaderboard_bg"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/dimen_32x"
+        android:layout_height="@dimen/dimen_32x"
+        android:layout_marginStart="@dimen/dimen_20x"
+        android:src="@drawable/ge_leaderboard_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_280x"
+        android:scaleType="fitXY"
+        android:src="@drawable/ge_leaderboard_logo"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvRule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dimen_5x"
+        android:paddingVertical="@dimen/dimen_6x"
+        android:text="@string/leaderboard_rule"
+        android:textColor="#233556"
+        android:textSize="@dimen/dimen_12x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+
+    <ImageView
+        android:id="@+id/ivInvite"
+        android:layout_width="@dimen/dimen_44x"
+        android:layout_height="@dimen/dimen_48x"
+        android:layout_marginTop="@dimen/dimen_20x"
+        android:src="@drawable/ge_leaderboard_invite"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/ivBack"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_10x"
+        android:background="@drawable/ge_leaderboard_back2"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo">
+
+        <me.jingbin.library.ByRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/dimen_4x"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@+id/clMyRank"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 我的排名 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clMyRank"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_74x"
+            android:background="@drawable/shape_radius24_ffffff"
+            android:elevation="@dimen/dimen_5x"
+            android:paddingHorizontal="@dimen/dimen_20x"
+            android:paddingTop="@dimen/dimen_8x"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/sivMyRankAvatar"
+                android:layout_width="@dimen/dimen_44x"
+                android:layout_height="@dimen/dimen_44x"
+                android:src="@drawable/default_user_avatar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/circleStyle" />
+
+            <TextView
+                android:id="@+id/tvMyRank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8x"
+                android:layout_marginEnd="@dimen/dimen_20x"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="未上榜"
+                android:textColor="#061925"
+                android:textSize="@dimen/dimen_14x"
+                app:layout_constraintBottom_toBottomOf="@+id/sivMyRankAvatar"
+                app:layout_constraintEnd_toStartOf="@+id/tvInviteesNumToday"
+                app:layout_constraintStart_toEndOf="@+id/sivMyRankAvatar"
+                app:layout_constraintTop_toTopOf="@+id/sivMyRankAvatar" />
+
+
+            <TextView
+                android:id="@+id/tvInviteesNumToday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8x"
+                android:text="今日邀请人数："
+                android:textColor="#A1A7AF"
+                android:textSize="@dimen/dimen_14x"
+                app:layout_constraintBottom_toBottomOf="@+id/sivMyRankAvatar"
+                app:layout_constraintEnd_toStartOf="@+id/tvInviteesNum"
+                app:layout_constraintTop_toTopOf="@+id/sivMyRankAvatar" />
+
+
+            <TextView
+                android:id="@+id/tvInviteesNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8x"
+                android:text="1"
+                android:textColor="#EF874E"
+                android:textSize="@dimen/dimen_26x"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/sivMyRankAvatar"
+                app:layout_constraintEnd_toStartOf="@+id/tvUnit"
+                app:layout_constraintTop_toTopOf="@+id/sivMyRankAvatar" />
+
+            <TextView
+                android:id="@+id/tvUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8x"
+                android:text="人"
+                android:textColor="#EF874E"
+                android:textSize="@dimen/dimen_12x"
+                app:layout_constraintBottom_toBottomOf="@+id/tvInviteesNum"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvInviteesNum" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

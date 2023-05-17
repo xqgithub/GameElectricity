@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/dimen_30x">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20x"
+        android:layout_marginTop="@dimen/dimen_18x"
+        android:text="请选择所在地区"
+        android:textColor="#061925"
+        android:textSize="@dimen/dimen_16x"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dimen_24x"
+        android:layout_height="@dimen/dimen_24x"
+        android:layout_marginEnd="@dimen/dimen_20x"
+        android:src="@drawable/ge_nav_close"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_25x"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dimen_15x">
+
+            <TextView
+                android:id="@+id/tv_province"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_5x"
+                android:text="请选择"
+                android:textColor="#EF874E"
+                android:textSize="@dimen/dimen_14x"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_28x"
+                android:padding="@dimen/dimen_5x"
+                android:text="请选择"
+                android:textColor="#EF874E"
+                android:textSize="@dimen/dimen_14x"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tv_province"
+                app:layout_constraintTop_toTopOf="@+id/tv_province" />
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_28x"
+                android:padding="@dimen/dimen_5x"
+                android:text="请选择"
+                android:textColor="#EF874E"
+                android:textSize="@dimen/dimen_14x"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tv_city"
+                app:layout_constraintTop_toTopOf="@+id/tv_city" />
+
+            <TextView
+                android:id="@+id/tv_street"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_28x"
+                android:padding="@dimen/dimen_5x"
+                android:text="请选择"
+                android:textColor="#EF874E"
+                android:textSize="@dimen/dimen_14x"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tv_area"
+                app:layout_constraintTop_toTopOf="@+id/tv_area" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+
+    <me.jingbin.library.ByRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_5x"
+        android:overScrollMode="never"
+        android:paddingHorizontal="@dimen/dimen_20x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hsv_area" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

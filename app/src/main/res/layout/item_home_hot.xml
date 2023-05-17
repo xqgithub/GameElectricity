@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16pt">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16pt"
+        android:paddingBottom="16pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clIcon"
+            android:layout_width="110pt"
+            android:layout_height="110pt"
+            android:background="#FFF7F1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/sivIcon"
+                android:layout_width="110pt"
+                android:layout_height="110pt"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_empty"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvMark"
+            android:layout_width="wrap_content"
+            android:layout_height="18pt"
+            android:layout_marginLeft="12pt"
+            android:background="@drawable/shape_radius_5f7153"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="6"
+            android:text="品牌品牌品牌品牌"
+            android:textColor="#FFFFFF"
+            android:textSize="10pt"
+            app:layout_constraintBottom_toBottomOf="@+id/clIcon"
+            app:layout_constraintEnd_toEndOf="@+id/clIcon"
+            app:layout_goneMarginBottom="6pt" />
+
+
+        <TextView
+            android:id="@+id/tvGoodsName"
+            android:layout_width="181pt"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12pt"
+            android:layout_marginTop="6pt"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="iPhone 13 Pro Max 256GB 粉色"
+            android:textColor="#061925"
+            android:textSize="16pt"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/clIcon"
+            app:layout_constraintTop_toTopOf="@+id/clIcon"
+            app:layout_goneMarginTop="0pt" />
+
+        <TextView
+            android:id="@+id/tvDiscountPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12pt"
+            android:text="¥5999.0"
+            android:textColor="#EF874E"
+            android:textSize="20pt"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/clIcon"
+            app:layout_constraintTop_toBottomOf="@+id/tvGoodsName"/>
+
+        <TextView
+            android:id="@+id/tvDefaultPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4pt"
+            android:text="原价 ¥5999.0"
+            android:textColor="#A1A7AF"
+            android:textSize="12pt"
+            app:layout_constraintStart_toEndOf="@+id/tvDiscountPrice"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDiscountPrice" />
+
+
+        <TextView
+            android:id="@+id/tvGoldCoinPrice"
+            android:layout_width="181pt"
+            android:layout_height="30pt"
+            android:layout_marginLeft="12pt"
+            android:background="@drawable/shape_radius_fdede4_2"
+            android:drawableLeft="@drawable/ic_hot_gold"
+            android:drawablePadding="4pt"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="金币抵扣5000元"
+            android:textColor="#EF874E"
+            android:textSize="10pt"
+            app:layout_constraintBottom_toBottomOf="@+id/clIcon"
+            app:layout_constraintStart_toEndOf="@+id/clIcon" />
+
+        <TextView
+            android:id="@+id/tvGroupSuccessPrice"
+            android:layout_width="150pt"
+            android:layout_height="36pt"
+            android:layout_marginTop="12pt"
+            android:background="@drawable/shape_radius_fdede4"
+            android:gravity="center"
+            android:text="¥2999.5 半价购"
+            android:textColor="#EF874E"
+            android:textSize="14pt"
+            app:layout_constraintStart_toStartOf="@+id/clIcon"
+            app:layout_constraintTop_toBottomOf="@+id/clIcon" />
+
+        <TextView
+            android:id="@+id/tvWish"
+            android:layout_width="150pt"
+            android:layout_height="36pt"
+            android:layout_marginTop="12pt"
+            android:background="@drawable/shape_radius_f19b3f_4"
+            android:drawableLeft="@drawable/ic_hot_join"
+            android:drawablePadding="4pt"
+            android:text="加入心愿购"
+            android:textColor="#FFFFFF"
+            android:textSize="14pt"
+            app:layout_constraintStart_toEndOf="@+id/tvGroupSuccessPrice"
+            app:layout_constraintTop_toBottomOf="@+id/clIcon" />
+
+        <TextView
+            android:id="@+id/tvWished"
+            android:layout_width="150pt"
+            android:layout_height="36pt"
+            android:layout_marginTop="12pt"
+            android:background="@drawable/shape_radius_ced3de_2"
+            android:drawableLeft="@drawable/ic_hot_join"
+            android:drawablePadding="4pt"
+            android:text="已加入心愿"
+            android:textColor="#FFFFFF"
+            android:textSize="14pt"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/tvGroupSuccessPrice"
+            app:layout_constraintTop_toBottomOf="@+id/clIcon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clWishShoppingUserNum"
+        android:layout_width="match_parent"
+        android:layout_height="36pt"
+        android:background="@drawable/shape_radius_f7f9fe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTop">
+
+        <TextView
+            android:id="@+id/tv10"
+            android:layout_width="20pt"
+            android:layout_height="20pt"
+            android:drawableLeft="@drawable/ic_hot_call"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="28pt"
+            app:layout_constraintStart_toEndOf="@+id/tv10"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="已有"
+                android:textColor="#A1A7AF"
+                android:textSize="12pt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/sivAvatar"
+                android:layout_width="16pt"
+                android:layout_height="16pt"
+                android:layout_marginLeft="4pt"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv11"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/default_user_icon" />
+
+            <TextView
+                android:id="@+id/tv12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4pt"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="AIFUN001...等"
+                android:textColor="#A1A7AF"
+                android:textSize="12pt"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/sivAvatar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvWishShoppingUserNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4pt"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="2000+"
+                android:textColor="#EF874E"
+                android:textSize="12pt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv12"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4pt"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="人已加入心愿购~"
+                android:textColor="#A1A7AF"
+                android:textSize="12pt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvWishShoppingUserNum"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

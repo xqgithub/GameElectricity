@@ -1,0 +1,118 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+def cfg = rootProject.ext.android
+def _dependencies = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion cfg.compileSdkVersion
+    buildToolsVersion cfg.buildToolsVersion
+    defaultConfig {
+        minSdkVersion cfg.minSdkVersion
+        targetSdkVersion cfg.targetSdkVersion
+        versionCode cfg.versionCode
+        versionName cfg.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    //kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    //lifecycle
+    api 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.0'
+    api 'androidx.lifecycle:lifecycle-common-java8:2.2.0'
+    api 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    // viewModel
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0"
+    api "androidx.fragment:fragment-ktx:1.3.1"
+    api "androidx.activity:activity-ktx:1.1.6"
+    // liveData
+    api "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+    api 'com.kunminx.archi:unpeek-livedata:4.4.1-beta1'
+    //navigation
+    api 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    api 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    //retrofit
+    api "com.squareup.retrofit2:retrofit:2.9.0"
+    api "com.squareup.retrofit2:converter-gson:2.9.0"
+    api 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    //动态替换BaseUrl库 使用可参考 https://github.com/JessYanCoding/RetrofitUrlManager
+    api 'me.jessyan:retrofit-url-manager:1.4.0'
+    /** 屏幕适配 **/
+    api _dependencies.autosize
+    /** utilcodex **/
+    api _dependencies.utilcodex
+    /** Rxjava3+retrofit2+okhttp3 **/
+    api _dependencies.rxjava3RxAndroidSDK
+    api _dependencies.rxjava3RxjavaSDk
+    api _dependencies.rxjava3RxkotlinSDk
+    api _dependencies.retrofit2RetrofitSDK
+    api _dependencies.retrofit2AdapterRxjava3SDk
+    api _dependencies.retrofit2ConverterSDk
+    api _dependencies.okhttp3
+    api _dependencies.logging_interceptor
+    /** ByRecyclerView **/
+    api _dependencies.ByRecyclerViewSDk
+    /** immersionbarSDK **/
+    api _dependencies.immersionbarSDK
+    /** gilde **/
+    api _dependencies.glide
+    /** 侧滑栏 **/
+    api _dependencies.SwipeDelMenuLayout
+    /**  eventbus3 **/
+    api _dependencies.eventbus3
+    /** BottomDialog **/
+    api _dependencies.bottomDialogSDK
+    /** 时间选择器 **/
+    api _dependencies.AndroidPickerViewSDk
+    /** Xpop **/
+    api _dependencies.xpopupSDk
+    /** AppStartup **/
+    api _dependencies.AppStartup
+    /** 百度地图 **/
+    //百度地图基础定位组件
+    api _dependencies.BaiduMapSDKLocation
+    //百度地图搜索
+    api _dependencies.BaiduMapSDKSearch
+    /** 进度条 **/
+    api _dependencies.ProgressBarSDK
+    /** 图片选择器 **/
+    api _dependencies.pictureSelectorSDK
+    /** 腾讯 cos  **/
+    api _dependencies.androidLiteSDK
+    /** Rxlifecyle  **/
+    api _dependencies.rxlifecycle
+    api _dependencies.rxlifecycle_android
+    api _dependencies.rxlifecycle_components
+    /** loading框架 **/
+    api _dependencies.AVLoadingIndicatorView
+    /** 支持反射 **/
+    api "org.jetbrains.kotlin:kotlin-reflect:$rootProject.ext.kotlin_version"
+    /** stetho 调试工具 **/
+    api _dependencies.stetho
+    api _dependencies.stethookhttp3
+}

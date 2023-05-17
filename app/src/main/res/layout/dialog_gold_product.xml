@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlHomeHandClick"
+        android:layout_width="0pt"
+        android:layout_height="230pt"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="260pt"
+        android:layout_height="368pt"
+        android:background="@drawable/bg_pup_success_pro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivImg"
+            android:layout_width="88pt"
+            android:layout_height="88pt"
+            android:layout_marginLeft="36pt"
+            android:layout_marginTop="134pt"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_empty"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+        <TextView
+            android:id="@+id/tvContentDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_radius_6c72fd_2"
+            android:text="每日必抢"
+            android:textColor="#FFFFFF"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="@+id/sivImg"
+            app:layout_constraintTop_toTopOf="@+id/sivImg" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="88pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12pt"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Iphone 13 Pro x1"
+            android:textColor="#57493B"
+            android:textSize="12pt"
+            app:layout_constraintEnd_toEndOf="@+id/sivImg"
+            app:layout_constraintStart_toStartOf="@+id/sivImg"
+            app:layout_constraintTop_toBottomOf="@+id/sivImg" />
+
+        <ImageView
+            android:id="@+id/sivImgGold"
+            android:layout_width="88pt"
+            android:layout_height="88pt"
+            android:layout_marginLeft="12pt"
+            android:layout_marginTop="134pt"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_img_gold"
+            app:layout_constraintStart_toEndOf="@+id/sivImg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+        <TextView
+            android:id="@+id/tvGoldContentDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_radius_f19b3f_2"
+            android:text="扭蛋"
+            android:textColor="#FFFFFF"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="@+id/sivImgGold"
+            app:layout_constraintTop_toTopOf="@+id/sivImgGold" />
+
+        <TextView
+            android:id="@+id/tvGoldContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12pt"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="金币 x20"
+            android:textColor="#57493B"
+            android:textSize="12pt"
+            app:layout_constraintEnd_toEndOf="@+id/sivImgGold"
+            app:layout_constraintStart_toStartOf="@+id/sivImgGold"
+            app:layout_constraintTop_toBottomOf="@+id/sivImgGold" />
+
+        <Button
+            android:id="@+id/btnSure"
+            android:layout_width="140pt"
+            android:layout_height="40pt"
+            android:layout_marginBottom="50pt"
+            android:background="@drawable/shape_radius_f19b3f"
+            android:text="确定"
+            android:textColor="#FFFFFF"
+            android:textSize="14pt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvContent2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="提示：虚拟物品或货币将直接发放至账户"
+            android:textColor="#FB8A70"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSure" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

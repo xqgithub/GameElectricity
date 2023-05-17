@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl00001"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_share_post_bg2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="70pt"
+            android:src="@drawable/ic_share_post_title2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl0001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55pt"
+            android:layout_marginBottom="130pt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/sivImg0001"
+                android:layout_width="24pt"
+                android:layout_height="24pt"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/default_user_avatar2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/circleStyle" />
+
+            <TextView
+                android:id="@+id/tv0005"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8pt"
+                android:ellipsize="end"
+                android:maxEms="8"
+                android:maxLines="1"
+                android:text="用户昵称最多显示..."
+                android:textColor="#233556"
+                android:textSize="10pt"
+                app:layout_constraintBottom_toBottomOf="@+id/sivImg0001"
+                app:layout_constraintStart_toEndOf="@+id/sivImg0001"
+                app:layout_constraintTop_toTopOf="@+id/sivImg0001" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv00003"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="19pt"
+            android:src="@drawable/ic_share_post_title3"
+            app:layout_constraintStart_toStartOf="@+id/cl0001"
+            app:layout_constraintTop_toBottomOf="@+id/cl0001" />
+
+
+        <TextView
+            android:id="@+id/tvGroupCode001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2pt"
+            android:text=""
+            android:textColor="#233556"
+            android:textSize="18pt"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv00003"
+            app:layout_constraintTop_toBottomOf="@+id/iv00003" />
+
+        <FrameLayout
+            android:id="@+id/mQrCodeRoot"
+            android:layout_width="98pt"
+            android:layout_height="98pt"
+            android:layout_marginRight="37pt"
+            android:layout_marginBottom="57pt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/ivQrcode"
+                android:layout_width="98pt"
+                android:layout_height="98pt"
+                android:layout_marginRight="37pt"
+                android:layout_marginBottom="57pt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

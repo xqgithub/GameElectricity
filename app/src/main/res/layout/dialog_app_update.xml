@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="285pt"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="285pt"
+            android:layout_height="410pt"
+            android:background="@drawable/ic_pup_update"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvContent1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="151pt"
+            android:gravity="center"
+            android:text="发现新版本"
+            android:textColor="#57493B"
+            android:textSize="22pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2pt"
+            android:gravity="center"
+            android:text="1.0.2"
+            android:textColor="#57493B"
+            android:textSize="13pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContent1" />
+
+        <com.sn.gameelectricity.app.weight.customview.emoji.EmojiconEditText
+            android:id="@+id/tvContent"
+            android:layout_width="205pt"
+            android:layout_height="wrap_content"
+            android:maxHeight="65pt"
+            android:layout_marginTop="8pt"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:hint="更内容，更新了游戏模快，可以赚取更多金币啦～"
+            android:textColor="#57493B"
+            android:textColorHint="#57493B"
+            android:textSize="13pt"
+            app:emojiconSize="14pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvVersion" />
+
+
+        <Button
+            android:id="@+id/btnSure"
+            android:layout_width="168pt"
+            android:layout_height="40pt"
+            android:layout_marginBottom="16pt"
+            android:background="@drawable/shape_radius_f19b3f"
+            android:text="立即更新"
+            android:textColor="#FFFFFF"
+            android:textSize="14pt"
+            app:layout_constraintBottom_toTopOf="@+id/tvCancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_goneMarginBottom="52pt" />
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40pt"
+            android:gravity="center"
+            android:text="稍后更新"
+            android:textColor="#6657493B"
+            android:textSize="14pt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

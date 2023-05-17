@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 输入控件的最小高度 -->
+
+    <!-- 头像大小 -->
+
+    <!-- 回复|转发控件 回复|转发内容最小宽度 -->
+    <dimen name="chat_reply_forward_cell_content_min_width">@dimen/dp70</dimen>
+    <!-- 回复|转发控件 标题和内容文字大小 -->
+    <!-- 回复|转发控件 消息类型图标大小 -->
+    <dimen name="chat_reply_forward_cell_msgtype_icon_size">@dimen/dp14</dimen>
+    <!-- 回复|转发控件 媒体消息(图片|名片) 最小宽度 -->
+    <dimen name="chat_reply_forward_cell_media_minwidth">@dimen/dp140</dimen>
+    <!-- 回复|转发控件 顶部间隔大小 -->
+    <dimen name="chat_reply_forward_cell_padding_top">@dimen/dp2</dimen>
+    <!-- 回复|转发控件 底部间隔大小 -->
+    <dimen name="chat_reply_forward_cell_padding_bottom">@dimen/dp2</dimen>
+    <!-- 回复|转发控件 引用标题和内容之间的间隔 -->
+    <dimen name="chat_reply_forward_cell_padding_middle">@dimen/dp2</dimen>
+
+    <!-- 引用控件 图片大小 -->
+    <dimen name="chat_reference_cell_icon_size">@dimen/dp35</dimen>
+
+    <!-- 条目的高度 对应Theme的ITEM_HEIGHT -->
+    <dimen name="item_height">48pt</dimen>
+    <!-- 条目间隔 -->
+    <dimen name="item_seperator_height">@dimen/dp12</dimen>
+    <!-- 界面顶部 空闲高度 -->
+    <dimen name="height_top_seperator">@dimen/dp15</dimen>
+
+    <dimen name="picker_status_size">24sp</dimen>
+    <dimen name="picker_map_place_title">16sp</dimen>
+    <dimen name="picker_map_place_subtitle">14sp</dimen>
+    <dimen name="picker_map_place_icon_size">38pt</dimen>
+
+
+    <!-- 发红包 输入支付密码 窗口宽 -->
+    <!-- 红包 窗口宽高 -->
+    <!-- 红包 聊天控件#祝福语的宽度 -->
+
+
+    <!-- 条目控件 # 文本标题大小 -->
+    <dimen name="cell_title_textsize">15sp</dimen>
+    <!-- 条目控件 # 文本副标题大小 -->
+    <dimen name="cell_subtitle_textsize">12sp</dimen>
+
+    <!-- 普通条目 # 左右Padding -->
+    <dimen name="padding_horizontal">@dimen/dp17</dimen>
+    <!-- 普通条目 # 上下Padding -->
+    <dimen name="padding_vertical">@dimen/dp10</dimen>
+    <dimen name="activity_horizontal_margin">16pt</dimen>
+    <dimen name="activity_vertical_margin">16pt</dimen>
+
+
+    <!-- “我” 界面 -->
+    <!-- “我” # 每个条目的高度 -->
+    <dimen name="height_item_mine">@dimen/dp46</dimen>
+    <!-- “我” # 每个条目左侧图标的大小 -->
+    <dimen name="size_item_mine_icon">@dimen/dp20</dimen>
+
+
+    <!--一些item下部描述字体的尺寸-->
+    <dimen name="text_size_des_bottom">13sp</dimen>
+
+    <!--一些item下部描述字体的顶部margin-->
+    <dimen name="text_size_desc_margin_top">3pt</dimen>
+
+    <!--回执图片的右边距离-->
+    <dimen name="receipt_right_size">3pt</dimen>
+
+    <!-- 界面底部 空闲高度 -->
+    <dimen name="height_bottom_seperator">@dimen/dp15</dimen>
+
+    <!-- 控件描述文字大小 etc：支付宝底部小字大小 -->
+    <dimen name="cell_desc_textsize">10sp</dimen>
+
+    <!--<dimen name="dp">3pt</dimen>-->
+    <!--<dimen name="dp">3pt</dimen>-->
+    <dimen name="dp0_5">1px</dimen>
+    <dimen name="dp1">1pt</dimen>
+    <dimen name="dp1_5">1.5pt</dimen>
+    <dimen name="dp2">2pt</dimen>
+    <dimen name="dp2_5">2.5pt</dimen>
+    <dimen name="dp3">3pt</dimen>
+    <dimen name="dp3_5">3.5pt</dimen>
+    <dimen name="dp4">4pt</dimen>
+    <dimen name="dp5">5pt</dimen>
+    <dimen name="dp6">6pt</dimen>
+    <dimen name="dp6_5">6.5pt</dimen>
+    <dimen name="dp7">7pt</dimen>
+    <dimen name="dp8">8pt</dimen>
+    <dimen name="dp9">9pt</dimen>
+    <dimen name="dp10">10pt</dimen>
+    <dimen name="dp11">11pt</dimen>
+    <dimen name="dp12">12pt</dimen>
+    <dimen name="dp13">13pt</dimen>
+    <dimen name="dp14">14pt</dimen>
+    <dimen name="dp15">15pt</dimen>
+    <dimen name="dp16">16pt</dimen>
+    <dimen name="dp17">17pt</dimen>
+    <dimen name="dp18">18pt</dimen>
+    <dimen name="dp19">19pt</dimen>
+    <dimen name="dp20">20pt</dimen>
+    <dimen name="dp21">21pt</dimen>
+    <dimen name="dp22">22pt</dimen>
+    <dimen name="dp23">23pt</dimen>
+    <dimen name="dp24">24pt</dimen>
+    <dimen name="dp25">25pt</dimen>
+    <dimen name="dp26">26pt</dimen>
+    <dimen name="dp27">27pt</dimen>
+    <dimen name="dp28">28pt</dimen>
+    <dimen name="dp29">29pt</dimen>
+    <dimen name="dp30">30pt</dimen>
+    <dimen name="dp31">31pt</dimen>
+    <dimen name="dp32">32pt</dimen>
+    <dimen name="dp33">33pt</dimen>
+    <dimen name="dp34">34pt</dimen>
+    <dimen name="dp35">35pt</dimen>
+    <dimen name="dp36">36pt</dimen>
+    <dimen name="dp38">38pt</dimen>
+    <dimen name="dp39">39pt</dimen>
+    <dimen name="dp40">40pt</dimen>
+    <dimen name="dp41">41pt</dimen>
+    <dimen name="dp42">42pt</dimen>
+    <dimen name="dp43">43pt</dimen>
+    <dimen name="dp44">44pt</dimen>
+    <dimen name="dp45">45pt</dimen>
+    <dimen name="dp46">46pt</dimen>
+    <dimen name="dp47">47pt</dimen>
+    <dimen name="dp48">48pt</dimen>
+    <dimen name="dp49">49pt</dimen>
+    <dimen name="dp50">50pt</dimen>
+    <dimen name="dp51">51pt</dimen>
+    <dimen name="dp52">52pt</dimen>
+    <dimen name="dp54">54pt</dimen>
+    <dimen name="dp55">55pt</dimen>
+    <dimen name="dp56">56pt</dimen>
+    <dimen name="dp57">57pt</dimen>
+    <dimen name="dp58">58pt</dimen>
+    <dimen name="dp59">59pt</dimen>
+    <dimen name="dp60">60pt</dimen>
+    <dimen name="dp63">63pt</dimen>
+    <dimen name="dp64">64pt</dimen>
+    <dimen name="dp65">65pt</dimen>
+    <dimen name="dp66">66pt</dimen>
+    <dimen name="dp67">67pt</dimen>
+    <dimen name="dp68">68pt</dimen>
+    <dimen name="dp70">70pt</dimen>
+    <dimen name="dp72">72pt</dimen>
+    <dimen name="dp75">75pt</dimen>
+    <dimen name="dp78">78pt</dimen>
+    <dimen name="dp80">80pt</dimen>
+    <dimen name="dp81">81pt</dimen>
+    <dimen name="dp82">83pt</dimen>
+    <dimen name="dp84">84pt</dimen>
+    <dimen name="dp85">85pt</dimen>
+    <dimen name="dp86">86pt</dimen>
+    <dimen name="dp88">88pt</dimen>
+    <dimen name="dp89">89pt</dimen>
+    <dimen name="dp90">90pt</dimen>
+    <dimen name="dp94">94pt</dimen>
+    <dimen name="dp95">95pt</dimen>
+    <dimen name="dp97">97pt</dimen>
+    <dimen name="dp100">100pt</dimen>
+    <dimen name="dp108">108pt</dimen>
+    <dimen name="dp114">114pt</dimen>
+    <dimen name="dp120">120pt</dimen>
+    <dimen name="dp124">124pt</dimen>
+    <dimen name="dp140">140pt</dimen>
+    <dimen name="dp144">144pt</dimen>
+    <dimen name="dp150">150pt</dimen>
+    <dimen name="dp160">160pt</dimen>
+    <dimen name="dp175">175pt</dimen>
+    <dimen name="dp180">180pt</dimen>
+    <dimen name="dp192">192pt</dimen>
+    <dimen name="dp200">200pt</dimen>
+    <dimen name="dp204">204pt</dimen>
+    <dimen name="dp216">216pt</dimen>
+    <dimen name="dp240">240pt</dimen>
+    <dimen name="dp250">250pt</dimen>
+    <dimen name="dp298">298pt</dimen>
+    <dimen name="dp356">356pt</dimen>
+    <dimen name="dp436">436pt</dimen>
+    <dimen name="dp480">480pt</dimen>
+    <dimen name="dp531">531pt</dimen>
+
+    <dimen name="sp10">10pt</dimen>
+    <dimen name="sp12">12pt</dimen>
+    <dimen name="sp13">13pt</dimen>
+    <dimen name="sp14">14pt</dimen>
+    <dimen name="sp15">15pt</dimen>
+    <dimen name="sp16">16pt</dimen>
+    <dimen name="sp18">18pt</dimen>
+    <dimen name="sp20">20pt</dimen>
+    <dimen name="sp22">22pt</dimen>
+    <dimen name="sp24">24pt</dimen>
+    <dimen name="sp26">26pt</dimen>
+
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_0">0dp</dimen>
+    <dimen name="chat_reply_bubble_margin">-6pt</dimen>
+    <dimen name="toolbarHeight">50pt</dimen>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dimen_10x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dimen_24x"
+            android:layout_height="@dimen/dimen_24x"
+            android:layout_marginStart="@dimen/dimen_16x"
+            android:layout_marginTop="@dimen/dimen_25x"
+            android:src="@drawable/ge_arrow_back_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="申请注销AIFUN账号"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_17x"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_back" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.sn.gameelectricity.app.weight.customview.MyNestedScrollView
+        android:id="@+id/nsv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_marginTop="@dimen/dimen_22x"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/tvDisagree"
+        app:layout_constraintTop_toBottomOf="@+id/cl_title">
+
+        <com.sn.gameelectricity.app.weight.customview.AlignTextView
+            android:id="@+id/atvAgreement"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/dimen_20x"
+            android:lineSpacingExtra="@dimen/dimen_8x"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_16x" />
+    </com.sn.gameelectricity.app.weight.customview.MyNestedScrollView>
+
+    <TextView
+        android:id="@+id/tvDisagree"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="top|center_horizontal"
+        android:paddingTop="@dimen/dimen_13x"
+        android:paddingBottom="@dimen/dimen_30x"
+        android:text="不同意"
+        android:textColor="#A1A7AF"
+        android:textSize="@dimen/dimen_16x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvAgree"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAgree"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="top|center_horizontal"
+        android:paddingTop="@dimen/dimen_13x"
+        android:paddingBottom="@dimen/dimen_30x"
+        android:text="同意并继续"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/dimen_16x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDisagree" />
+</androidx.constraintlayout.widget.ConstraintLayout>

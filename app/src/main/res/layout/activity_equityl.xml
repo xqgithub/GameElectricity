@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_equity"
+    android:layout_height="match_parent">
+
+
+
+<!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
+<!--        android:id="@+id/coordinatorLayoutBase"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0pt"-->
+<!--       -->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:id="@+id/appBar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/transparent">-->
+
+<!--            <com.google.android.material.appbar.CollapsingToolbarLayout-->
+<!--                android:id="@+id/toolbarLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                app:contentScrim="#ffffff"-->
+<!--                app:layout_scrollFlags="scroll|exitUntilCollapsed">-->
+
+<!--                -->
+
+<!--               -->
+
+<!--            </com.google.android.material.appbar.CollapsingToolbarLayout>-->
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetStart="0pt"
+            app:layout_collapseMode="pin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44pt">
+
+                <ImageButton
+                    android:id="@+id/toolbarBack"
+                    android:layout_width="32pt"
+                    android:layout_height="32pt"
+                    android:layout_marginStart="16pt"
+                    android:background="@drawable/transparent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ge_arrow_back_white" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="权益中心"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17pt"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ivEquityRule"
+                    android:layout_width="23pt"
+                    android:layout_height="44pt"
+                    android:background="@drawable/ic_equity_rule2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0pt"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl0001"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl01"
+                            android:layout_width="match_parent"
+                            android:layout_height="171pt"
+                            android:layout_marginHorizontal="18pt"
+                            android:layout_marginTop="32pt"
+                            android:background="@drawable/bg_equity_top_frame"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv005"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36pt"
+                                android:layout_marginLeft="14pt"
+                                android:layout_marginTop="22pt"
+                                android:text="奖券"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16pt"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/tv006"
+                                android:layout_width="36pt"
+                                android:layout_height="36pt"
+                                android:layout_marginTop="14pt"
+                                android:src="@drawable/ic_equity_coupon_enter"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16pt"
+                                app:layout_constraintStart_toEndOf="@+id/tv005"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Button
+                                android:id="@+id/btnSure"
+                                android:layout_width="78pt"
+                                android:layout_height="36pt"
+                                android:layout_margin="15pt"
+                                android:layout_marginLeft="12pt"
+                                android:background="@drawable/shape_radius_f19b3f"
+                                android:text="去兑换"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14pt"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clAll"
+                                android:layout_width="90pt"
+                                android:layout_height="94pt"
+                                android:layout_marginLeft="13pt"
+                                android:layout_marginTop="66pt"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/sivImg01"
+                                    android:layout_width="48pt"
+                                    android:layout_height="48pt"
+                                    android:layout_marginTop="10pt"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_equity_level_golden"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+                                <TextView
+                                    android:id="@+id/tvGoldCouponNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5pt"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="0/1"
+                                    android:textColor="#E5ECFE"
+                                    android:textSize="12pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg01"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg01"
+                                    app:layout_constraintTop_toBottomOf="@+id/sivImg01" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clLegend"
+                                android:layout_width="90pt"
+                                android:layout_height="94pt"
+                                android:layout_marginLeft="18pt"
+                                android:layout_marginTop="66pt"
+                                app:layout_constraintStart_toEndOf="@+id/clAll"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/sivImg02"
+                                    android:layout_width="48pt"
+                                    android:layout_height="48pt"
+                                    android:layout_marginTop="10pt"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_equity_level_golden2"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+                                <TextView
+                                    android:id="@+id/tvSilverCouponNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5pt"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="0/1"
+                                    android:textColor="#E5ECFE"
+                                    android:textSize="12pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg02"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg02"
+                                    app:layout_constraintTop_toBottomOf="@+id/sivImg02" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clEpic"
+                                android:layout_width="90pt"
+                                android:layout_height="94pt"
+                                android:layout_marginLeft="18pt"
+                                android:layout_marginTop="66pt"
+                                app:layout_constraintStart_toEndOf="@+id/clLegend"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/sivImg03"
+                                    android:layout_width="48pt"
+                                    android:layout_height="48pt"
+                                    android:layout_marginTop="10pt"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_equity_level_golden3"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+                                <TextView
+                                    android:id="@+id/tvBronzeCouponNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5pt"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="0/1"
+                                    android:textColor="#E5ECFE"
+                                    android:textSize="12pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg03"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg03"
+                                    app:layout_constraintTop_toBottomOf="@+id/sivImg03" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl06"
+                            android:layout_width="match_parent"
+                            android:layout_height="66pt"
+                            android:layout_marginHorizontal="16pt"
+                            android:layout_marginTop="14pt"
+                            android:background="@drawable/bg_equity_bot_frame"
+                            app:layout_constraintTop_toBottomOf="@+id/cl01">
+
+                            <TextView
+                                android:id="@+id/tv007"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36pt"
+                                android:layout_marginLeft="14pt"
+                                android:layout_marginTop="22pt"
+                                android:text="权益商品"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16pt"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/tv008"
+                                android:layout_width="36pt"
+                                android:layout_height="36pt"
+                                android:layout_marginTop="14pt"
+                                android:src="@drawable/ic_equity_coupon_enter"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16pt"
+                                app:layout_constraintStart_toEndOf="@+id/tv007"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <me.jingbin.library.ByRecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="16pt"
+                    android:background="#3f3096"
+                    android:paddingHorizontal="4pt"
+                    android:paddingTop="12pt"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+<!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pro_share">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="287pt"
+        android:layout_height="474pt"
+        android:layout_marginTop="98pt"
+        android:background="@drawable/bg_prod_share"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv01"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20pt"
+            android:src="@drawable/default_user_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2pt" />
+
+        <TextView
+            android:id="@+id/tv01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4pt"
+            android:text="AIFUN003948"
+            android:textColor="#061925"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv01" />
+
+        <ImageView
+            android:id="@+id/iv001"
+            android:layout_width="186pt"
+            android:layout_height="26pt"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_share_pro_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv01" />
+
+        <TextView
+            android:id="@+id/tv02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6pt"
+            android:text="快来加入吧，丰厚礼品随机掉落噢～"
+            android:textColor="#061925"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv001" />
+
+        <ImageView
+            android:id="@+id/iv002"
+            android:layout_width="218pt"
+            android:layout_height="173pt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16pt"
+            android:src="@drawable/ic_share_pro_title2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv02" />
+
+        <ImageView
+            android:id="@+id/iv003"
+            android:layout_width="94pt"
+            android:layout_height="19pt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="43pt"
+            android:src="@drawable/ic_share_pro_title3"
+            app:layout_constraintStart_toStartOf="@+id/iv002"
+            app:layout_constraintTop_toBottomOf="@+id/iv002" />
+
+        <TextView
+            android:id="@+id/tvGroupCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15pt"
+            android:background="@drawable/shape_radius_fdede4_3"
+            android:gravity="center"
+            android:text="邀请码  8DDE495R8"
+            android:textColor="#EF874E"
+            android:textSize="10pt"
+            app:layout_constraintStart_toStartOf="@+id/iv002"
+            app:layout_constraintTop_toBottomOf="@+id/iv003" />
+
+        <ImageView
+            android:id="@+id/ivQrcode"
+            android:layout_width="66pt"
+            android:layout_height="66pt"
+            android:layout_marginBottom="44pt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iv002" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="152pt"
+        android:background="@drawable/bg_day_recommend_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="24pt"
+            android:layout_height="24pt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20pt"
+            android:layout_marginRight="16pt"
+            android:src="@drawable/icon_group_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20pt"
+            android:layout_marginTop="18pt"
+            android:text="分享至"
+            android:textColor="#061925"
+            android:textSize="16pt"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/tv20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40pt"
+                android:drawableTop="@drawable/ic_share_wx"
+                android:drawablePadding="8pt"
+                android:gravity="center"
+                android:text="微信"
+                android:textColor="#233556"
+                android:textSize="12pt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40pt"
+                android:drawableTop="@drawable/ic_share_wx2"
+                android:drawablePadding="8pt"
+                android:gravity="center"
+                android:text="朋友圈"
+                android:textColor="#233556"
+                android:textSize="12pt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv20" />
+
+            <TextView
+                android:id="@+id/tv22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40pt"
+                android:drawableTop="@drawable/ic_share_qq"
+                android:drawablePadding="8pt"
+                android:gravity="center"
+                android:text="QQ"
+                android:textColor="#233556"
+                android:textSize="12pt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv21" />
+
+            <TextView
+                android:id="@+id/tv23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40pt"
+                android:drawableTop="@drawable/ic_share_wb"
+                android:drawablePadding="8pt"
+                android:gravity="center"
+                android:text="微博"
+                android:textColor="#233556"
+                android:textSize="12pt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv22" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

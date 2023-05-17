@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240pt"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="50pt"
+        android:layout_height="35pt"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_dialog_top2" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24pt"
+        android:background="@drawable/ic_pup_img_bg">
+
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="240pt"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24pt"
+                android:text="主人，已经为您将该商品加入心"
+                android:textColor="#57493B"
+                android:textSize="13pt" />
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="27dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="top"
+                android:text="愿购啦～"
+                android:textColor="#50555C"
+                android:textSize="13pt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llContent"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSure"
+                android:layout_width="140pt"
+                android:layout_height="40pt"
+                android:layout_marginLeft="12pt"
+                android:background="@drawable/shape_radius_f19b3f"
+                android:text="去抽奖 >"
+                android:textColor="#FFFFFF"
+                android:textSize="14pt" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

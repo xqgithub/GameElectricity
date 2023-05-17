@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_12x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvGoodsName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16pt"
+                android:layout_marginTop="30pt"
+                android:text="1.获得的奖券有效期为24小时，请及时使用。
+\n2.奖券分为金银铜三种，获得条件为排名不同获得的券不同，对应可兑换的物品不同。
+\n3.权益物品支持回收、提货。"
+                android:textColor="#061925"
+                android:textSize="16pt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_title_top"
+        android:layout_width="@dimen/dimen_200x"
+        android:layout_height="@dimen/dimen_80x"
+        android:scaleType="fitXY"
+        android:src="@drawable/ge_money_dialog_title_animal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="@dimen/dimen_120x"
+        android:layout_height="@dimen/dimen_36x"
+        android:src="@drawable/ic_dialog_equitydes_top"
+        app:layout_constraintEnd_toEndOf="@+id/iv_title_top"
+        app:layout_constraintStart_toStartOf="@+id/iv_title_top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dimen_40x"
+        android:layout_height="@dimen/dimen_40x"
+        android:layout_marginTop="2pt"
+        android:layout_marginEnd="@dimen/dimen_4x"
+        android:src="@drawable/ic_game_pup_close"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_title" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="52dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/navigationRoot"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/background_tab_layout"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:focusable="true">
+
+        <LinearLayout
+            android:id="@+id/tabHome"
+            android:layout_width="86dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="@dimen/dp10"
+            android:background="@drawable/selector_btn_ef874e"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/tabHomeIconView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/navigation_tab_home" />
+
+            <TextView
+                android:id="@+id/tabHomeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="兑好物"
+                android:textColor="@color/navigation_text_selected"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tabMoney"
+            android:layout_width="86dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="@dimen/dp10"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tabMine"
+            app:layout_constraintStart_toEndOf="@id/tabHome"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/tabMoneyIconView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/navigation_tab_money_normal" />
+
+            <TextView
+                android:id="@+id/tabMoneyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="赚金币"
+                android:textColor="@color/navigation_text_unselected"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabMine"
+            android:layout_width="86dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="@dimen/dp10"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/tabMineIconView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/navigation_tab_mine_normal" />
+
+            <TextView
+                android:id="@+id/tabMineTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="我的"
+                android:textColor="@color/navigation_text_unselected"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_mask_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_tab_layout2"
+        android:elevation="5dp"
+        android:visibility="gone" />
+</FrameLayout>

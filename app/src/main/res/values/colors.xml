@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F0F9F9F9</color>
+    <color name="colorPrimaryDark">#F0F9F9F9</color>
+    <color name="colorAccent">#F0F9F9F9</color>
+    <color name="textHint">#999999</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorGray">#333</color>
+    <color name="colorBlack666">#666</color>
+    <color name="colorBlack333">#333</color>
+    <color name="windowBackground">#F5F5F5</color>
+    <color name="background">#d8d8d8</color>
+    <color name="backgroundeee">#eeeeee</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent2">#CC000000</color>
+    <color name="navigation_text_selected">#EF874E</color>
+    <color name="navigation_text_unselected">#A1A7AF</color>
+
+    <color name="color_F0F9F9F9">#F0F9F9F9</color>
+    <color name="color_DADADA">#DADADA</color>
+    <color name="theme_color_blue">#0A7EF2</color>
+    <color name="color_E8E8EB">#E8E8EB</color>
+    <color name="color_828282">#828282</color>
+    <color name="color_F0F0F0">#F0F0F0</color>
+    <color name="color_FDFDFD">#FDFDFD</color>
+    <color name="color_F7F9F9F9">#F7F9F9F9</color>
+    <color name="color_F8F8F8">#F8F8F8</color>
+    <color name="color_D9D9D9">#D9D9D9</color>
+    <color name="color_8C8C8C">#8C8C8C</color>
+    <color name="color_4EEAC4">#4EEAC4</color>
+    <color name="tag_orange">#F99A72</color>
+    <color name="color_86FBD5">#86FBD5</color>
+    <color name="color_4eeac4">#4EEAC4</color>
+    <color name="divide_line">#ffd9d9d9</color>
+    <color name="color_44CFB3">#44CFB3</color>
+    <color name="divider">#dcdcdc</color>
+    <color name="BLACK">#ff000000</color>
+    <color name="theme_color_blue_main">#FA4E39</color>
+    <color name="color_44CFC4">#4EEAC4</color>
+    <color name="hint_edittext_textcolor">#FFBDBDBD</color>
+    <color name="textview_error_textcolor">#FFF43530</color>
+    <color name="color_061925">#061925</color>
+    <color name="color_6A7079">#6A7079</color>
+    <color name="gray_f888">#FF888888</color>
+    <color name="color_A1A7AF">#A1A7AF</color>
+
+</resources>

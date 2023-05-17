@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayoutBase"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:background="@drawable/bg_home_prize_pool"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="#ffffff"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl0001"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/iv01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="98pt"
+                            android:src="@drawable/ic_share_prize_pool"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvContext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10pt"
+                            android:text="共100款(22款传说 25款史诗 46款尊贵 合计93款)"
+                            android:textColor="#233556"
+                            android:textSize="12pt"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iv01" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl01"
+                            android:layout_width="match_parent"
+                            android:layout_height="136pt"
+                            android:layout_marginHorizontal="18pt"
+                            android:layout_marginTop="16pt"
+                            android:background="@drawable/ic_prize_pool_frame"
+                            app:layout_constraintTop_toBottomOf="@+id/tvContext">
+
+                            <ImageView
+                                android:layout_width="95pt"
+                                android:layout_height="35pt"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_home_prize_level_title"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clAll"
+                                android:layout_width="67pt"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="32pt"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/sivImg01"
+                                    android:layout_width="32pt"
+                                    android:layout_height="32pt"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_home_prize_level_all"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+                                <TextView
+                                    android:id="@+id/tvAllTex"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5pt"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="全部"
+                                    android:textColor="#EF874E"
+                                    android:textSize="10pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg01"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg01"
+                                    app:layout_constraintTop_toBottomOf="@+id/sivImg01" />
+
+                                <TextView
+                                    android:id="@+id/tvAll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5pt"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="100%"
+                                    android:textColor="#EF874E"
+                                    android:textSize="10pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg01"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg01"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvAllTex" />
+
+                                <TextView
+                                    android:id="@+id/tvWishShopping"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="(含心愿购)"
+                                    android:textColor="#EF874E"
+                                    android:textSize="10pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg01"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg01"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvAll" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clLegend"
+                                android:layout_width="67pt"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="32pt"
+                                app:layout_constraintStart_toEndOf="@+id/clAll"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/sivImg02"
+                                    android:layout_width="32pt"
+                                    android:layout_height="32pt"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_home_prize_level_cs"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+                                <TextView
+                                    android:id="@+id/tvLegendTex"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5pt"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="传说"
+                                    android:textColor="#57493B"
+                                    android:textSize="10pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg02"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg02"
+                                    app:layout_constraintTop_toBottomOf="@+id/sivImg02" />
+
+                                <TextView
+                                    android:id="@+id/tvLegend"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5pt"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="0.10%"
+                                    android:textColor="#57493B"
+                                    android:textSize="10pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg02"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg02"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvLegendTex" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clEpic"
+                                android:layout_width="67pt"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="32pt"
+                                app:layout_constraintStart_toEndOf="@+id/clLegend"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/sivImg03"
+                                    android:layout_width="32pt"
+                                    android:layout_height="32pt"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_home_prize_level_ss"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+                                <TextView
+                                    android:id="@+id/tvEpicTex"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5pt"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="史诗"
+                                    android:textColor="#57493B"
+                                    android:textSize="10pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg03"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg03"
+                                    app:layout_constraintTop_toBottomOf="@+id/sivImg03" />
+
+                                <TextView
+                                    android:id="@+id/tvEpic"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5pt"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="5.10%"
+                                    android:textColor="#57493B"
+                                    android:textSize="10pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg03"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg03"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvEpicTex" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clRare"
+                                android:layout_width="67pt"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="32pt"
+                                app:layout_constraintStart_toEndOf="@+id/clEpic"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/sivImg04"
+                                    android:layout_width="32pt"
+                                    android:layout_height="32pt"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_home_prize_level_xy"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+                                <TextView
+                                    android:id="@+id/tvRareTex"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5pt"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="稀有"
+                                    android:textColor="#57493B"
+                                    android:textSize="10pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg04"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg04"
+                                    app:layout_constraintTop_toBottomOf="@+id/sivImg04" />
+
+                                <TextView
+                                    android:id="@+id/tvRare"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5pt"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="56.00%"
+                                    android:textColor="#57493B"
+                                    android:textSize="10pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg04"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg04"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvRareTex" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clValuable"
+                                android:layout_width="67pt"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="32pt"
+                                app:layout_constraintStart_toEndOf="@+id/clRare"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/sivImg05"
+                                    android:layout_width="32pt"
+                                    android:layout_height="32pt"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_home_prize_level_zg"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+                                <TextView
+                                    android:id="@+id/tvValuableTex"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5pt"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="尊贵"
+                                    android:textColor="#57493B"
+                                    android:textSize="10pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg05"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg05"
+                                    app:layout_constraintTop_toBottomOf="@+id/sivImg05" />
+
+                                <TextView
+                                    android:id="@+id/tvValuable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5pt"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="39.9%"
+                                    android:textColor="#57493B"
+                                    android:textSize="10pt"
+                                    app:layout_constraintEnd_toEndOf="@+id/sivImg05"
+                                    app:layout_constraintStart_toStartOf="@+id/sivImg05"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvValuableTex" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:contentInsetStart="0pt"
+                    app:layout_collapseMode="pin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44pt">
+
+                        <ImageButton
+                            android:id="@+id/toolbarBack"
+                            android:layout_width="32pt"
+                            android:layout_height="32pt"
+                            android:layout_marginStart="16pt"
+                            android:background="@drawable/transparent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ge_arrow_back_black" />
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="奖品池"
+                            android:textColor="#061925"
+                            android:textSize="17pt"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <me.jingbin.library.ByRecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fcfcfc"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                    android:id="@+id/cl32"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/cl01">-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/tv04"-->
+                <!--                        android:layout_width="181pt"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginHorizontal="20pt"-->
+                <!--                        android:layout_marginVertical="12pt"-->
+                <!--                        android:layout_marginLeft="12pt"-->
+                <!--                        android:layout_marginTop="6pt"-->
+                <!--                        android:ellipsize="end"-->
+                <!--                        android:maxLines="2"-->
+                <!--                        android:text="商品说明"-->
+                <!--                        android:textColor="#061925"-->
+                <!--                        android:textSize="14pt"-->
+                <!--                        android:textStyle="bold"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/tv05"-->
+                <!--                        android:layout_width="335pt"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginHorizontal="20pt"-->
+                <!--                        android:layout_marginVertical="12pt"-->
+                <!--                        android:layout_marginTop="6pt"-->
+                <!--                        android:text="Pro级摄像头系统，能力强悍提升；-->
+                <!--                                \n显示屏响应之快，让体验全面刷新；-->
+                <!--                                \n芯片速度再创 iPhone 巅峰；-->
+                <!--                                \n坚固耐用的设计，出类拔萃；-->
+                <!--                                \n电池续航更是大步飞跃。-->
+                <!--                                \n来吧，Pro起来。"-->
+                <!--                        android:textColor="#061925"-->
+                <!--                        android:textSize="14pt"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@+id/tv04"-->
+                <!--                        app:layout_goneMarginTop="0pt" />-->
+
+                <!--                    <ImageView-->
+                <!--                        android:id="@+id/iv31"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="375pt"-->
+                <!--                        android:background="@drawable/ic_product_top"-->
+                <!--                        android:scaleType="centerCrop"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@+id/tv05" />-->
+
+                <!--                    <ImageView-->
+                <!--                        android:id="@+id/iv32"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="375pt"-->
+                <!--                        android:background="@drawable/ic_product_top"-->
+                <!--                        android:scaleType="centerCrop"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@+id/iv31" />-->
+
+                <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRefresh"
+        android:layout_width="79pt"
+        android:layout_height="76pt"
+        android:layout_marginBottom="26pt"
+        android:background="@drawable/ic_home_prize_refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvGoldCoinPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12pt"
+            android:layout_marginTop="44pt"
+            android:drawableLeft="@drawable/ic_hot_gold"
+            android:drawablePadding="4pt"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="x100"
+            android:textColor="#57493B"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clGold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44pt"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvGoldName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:textColor="#EF874E"
+                android:textSize="14pt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvGoldPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/10"
+                android:textColor="#061925"
+                android:textSize="14pt"
+                app:layout_constraintStart_toEndOf="@+id/tvGoldName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dimen_10x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dimen_24x"
+            android:layout_height="@dimen/dimen_24x"
+            android:layout_marginStart="@dimen/dimen_16x"
+            android:layout_marginTop="@dimen/dimen_25x"
+            android:src="@drawable/ge_arrow_back_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="个人信息编辑"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_17x"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_back" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/dimen_16x"
+        app:layout_constraintTop_toBottomOf="@+id/cl_title">
+
+        <TextView
+            android:id="@+id/tv_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="头像"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_15x"
+            app:layout_constraintBottom_toBottomOf="@+id/siv_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/siv_avatar" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/siv_avatar"
+            android:layout_width="@dimen/dimen_62x"
+            android:layout_height="@dimen/dimen_62x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_more"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/circleStyle"
+            app:srcCompat="@drawable/default_user_icon" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="@dimen/dimen_24x"
+            android:layout_height="@dimen/dimen_24x"
+            android:src="@drawable/ge_nav_arrow_rigth_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/siv_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/siv_avatar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/dimen_16x"
+        android:paddingVertical="@dimen/dimen_18x"
+        app:layout_constraintTop_toBottomOf="@+id/cl_avatar">
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_15x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nickname_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:maxLines="1"
+            android:text="一二三四五六七八九十一二三"
+            android:textColor="#6A7079"
+            android:textSize="@dimen/dimen_14x"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_nickname"
+            app:layout_constraintEnd_toStartOf="@+id/iv_more2"
+            app:layout_constraintTop_toTopOf="@+id/tv_nickname" />
+
+
+        <ImageView
+            android:id="@+id/iv_more2"
+            android:layout_width="@dimen/dimen_24x"
+            android:layout_height="@dimen/dimen_24x"
+            android:src="@drawable/ge_nav_arrow_rigth_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_nickname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_nickname" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/dimen_16x"
+        android:paddingVertical="@dimen/dimen_18x"
+        app:layout_constraintTop_toBottomOf="@+id/cl_nickname">
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_15x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_gender_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女"
+            android:textColor="#6A7079"
+            android:textSize="@dimen/dimen_14x"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_gender"
+            app:layout_constraintEnd_toStartOf="@+id/iv_more3"
+            app:layout_constraintTop_toTopOf="@+id/tv_gender" />
+
+
+        <ImageView
+            android:id="@+id/iv_more3"
+            android:layout_width="@dimen/dimen_24x"
+            android:layout_height="@dimen/dimen_24x"
+            android:src="@drawable/ge_nav_arrow_rigth_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_gender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_gender" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_birthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/dimen_16x"
+        android:paddingVertical="@dimen/dimen_18x"
+        app:layout_constraintTop_toBottomOf="@+id/cl_gender">
+
+        <TextView
+            android:id="@+id/tv_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="生日"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_15x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_birthday_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1999.02.22"
+            android:textColor="#6A7079"
+            android:textSize="@dimen/dimen_14x"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_birthday"
+            app:layout_constraintEnd_toStartOf="@+id/iv_more4"
+            app:layout_constraintTop_toTopOf="@+id/tv_birthday" />
+
+
+        <ImageView
+            android:id="@+id/iv_more4"
+            android:layout_width="@dimen/dimen_24x"
+            android:layout_height="@dimen/dimen_24x"
+            android:src="@drawable/ge_nav_arrow_rigth_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_birthday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_birthday" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

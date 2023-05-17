@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dimen_10x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dimen_24x"
+            android:layout_height="@dimen/dimen_24x"
+            android:layout_marginStart="@dimen/dimen_16x"
+            android:layout_marginTop="@dimen/dimen_25x"
+            android:src="@drawable/ge_arrow_back_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="关于我们"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_17x"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_back" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/siv_app_icon"
+        android:layout_width="@dimen/dimen_80x"
+        android:layout_height="@dimen/dimen_80x"
+        android:layout_marginTop="@dimen/dimen_50x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_title"
+        app:shapeAppearance="@style/roundedCornerImageStyle24"
+        app:srcCompat="@drawable/logo_aifun" />
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_12x"
+        android:text="AI Fun"
+        android:textColor="#061925"
+        android:textSize="@dimen/dimen_20x"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/siv_app_icon"
+        app:layout_constraintStart_toStartOf="@+id/siv_app_icon"
+        app:layout_constraintTop_toBottomOf="@+id/siv_app_icon" />
+
+    <TextView
+        android:id="@+id/tv_version_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_3x"
+        android:text="V1.0.0"
+        android:textColor="#A1A7AF"
+        android:textSize="@dimen/dimen_12x"
+        app:layout_constraintEnd_toEndOf="@+id/tv_app_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_app_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_name" />
+
+    <com.sn.gameelectricity.app.weight.customview.AlignTextView
+        android:id="@+id/atv_introduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_40x"
+        android:layout_marginTop="@dimen/dimen_12x"
+        app:layout_constraintTop_toBottomOf="@+id/tv_version_name" />
+
+
+    <TextView
+        android:id="@+id/tv_contact_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_40x"
+        android:text="联系我们"
+        android:textColor="#061925"
+        android:textSize="@dimen/dimen_16x"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/atv_introduce"
+        app:layout_constraintStart_toStartOf="@+id/atv_introduce"
+        app:layout_constraintTop_toBottomOf="@+id/atv_introduce" />
+
+    <TextView
+        android:id="@+id/tv_contact_us_weixin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20x"
+        android:text="AI Fun微信客服：2812967193"
+        android:textColor="#061925"
+        android:textSize="@dimen/dimen_13x"
+        app:layout_constraintEnd_toEndOf="@+id/tv_contact_us"
+        app:layout_constraintStart_toStartOf="@+id/tv_contact_us"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contact_us" />
+
+    <TextView
+        android:id="@+id/tv_contact_us_weibo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20x"
+        android:text="AI Fun微博：2812967193"
+        android:textColor="#061925"
+        android:textSize="@dimen/dimen_13x"
+        app:layout_constraintEnd_toEndOf="@+id/tv_contact_us"
+        app:layout_constraintStart_toStartOf="@+id/tv_contact_us"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contact_us_weixin" />
+
+    <TextView
+        android:id="@+id/tv_contact_us_business"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20x"
+        android:text="AI Fun商务：2812967193"
+        android:textColor="#061925"
+        android:textSize="@dimen/dimen_13x"
+        app:layout_constraintEnd_toEndOf="@+id/tv_contact_us"
+        app:layout_constraintStart_toStartOf="@+id/tv_contact_us"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contact_us_weibo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

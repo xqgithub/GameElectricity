@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+
+    <QQ
+        AppId="102009900"
+        AppKey="dA6oKcfVmpeHgYCb"/>
+
+    <Wechat
+        AppId="wx984e9b86b78c58a9"
+        AppSecret="bf73a7346bd906462a181e72ae113191"/>
+
+    <SinaWeibo
+        AppKey="3273479964"
+        AppSecret="712382391d3434a15e887bee99cefdd3"
+        RedirectUrl="https://www.jiguang.cn"/>
+
+</DevInfor>

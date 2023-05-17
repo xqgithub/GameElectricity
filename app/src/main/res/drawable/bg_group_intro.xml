@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <item android:state_focused="true">-->
+<!--        <shape  android:shape="rectangle">-->
+<!--            <corners android:radius="8dp" />-->
+<!--            <padding android:left="10dp" android:right="10dp" />-->
+
+<!--            <stroke android:width="2dp" android:color="@color/colorAccent" />&lt;!&ndash; 描边，边框宽度、颜色 &ndash;&gt;-->
+<!--            <gradient android:angle="0" android:centerColor="#0a000000" android:centerX="0.5" android:centerY="0.5" android:endColor="#0a000000" android:startColor="#0a000000" android:type="linear" />-->
+
+<!--        </shape>-->
+<!--    </item>-->
+
+    <item android:state_focused="false">
+        <shape  android:shape="rectangle">
+            <corners android:radius="8dp" />
+            <padding android:left="10dp" android:right="10dp" android:top="5dp" />
+
+            <gradient android:angle="0" android:centerColor="#FBFBFB" android:centerX="0.5" android:centerY="0.5" android:endColor="#FBFBFB" android:startColor="#FBFBFB" android:type="linear" />
+
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/dimen_20x"
+    android:paddingVertical="@dimen/dimen_14x">
+
+
+    <TextView
+        android:id="@+id/tvRankNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textColor="#6A7079"
+        android:textSize="@dimen/dimen_14x"
+        app:layout_constraintBottom_toBottomOf="@+id/sivAvatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sivAvatar" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/sivAvatar"
+        android:layout_width="@dimen/dimen_44x"
+        android:layout_height="@dimen/dimen_44x"
+        android:layout_marginStart="@dimen/dimen_15x"
+        android:src="@drawable/img_empty"
+        app:layout_constraintStart_toEndOf="@+id/tvRankNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/circleStyle" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8x"
+        android:layout_marginEnd="@dimen/dimen_20x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="3"
+        android:textColor="#061925"
+        android:textSize="@dimen/dimen_16x"
+        app:layout_constraintBottom_toBottomOf="@+id/sivAvatar"
+        app:layout_constraintEnd_toStartOf="@+id/tvInviteesNum"
+        app:layout_constraintStart_toEndOf="@+id/sivAvatar"
+        app:layout_constraintTop_toTopOf="@+id/sivAvatar" />
+
+    <TextView
+        android:id="@+id/tvInviteesNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8x"
+        android:text="99"
+        android:textColor="#EF874E"
+        android:textSize="@dimen/dimen_26x"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/sivAvatar"
+        app:layout_constraintEnd_toStartOf="@+id/tvUnit"
+        app:layout_constraintTop_toTopOf="@+id/sivAvatar" />
+
+    <TextView
+        android:id="@+id/tvUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8x"
+        android:text="人"
+        android:textColor="#EF874E"
+        android:textSize="@dimen/dimen_12x"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInviteesNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvInviteesNum" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

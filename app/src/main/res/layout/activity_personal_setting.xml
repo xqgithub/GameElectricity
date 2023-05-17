@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F9FE">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dimen_10x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dimen_24x"
+            android:layout_height="@dimen/dimen_24x"
+            android:layout_marginStart="@dimen/dimen_16x"
+            android:layout_marginTop="@dimen/dimen_25x"
+            android:src="@drawable/ge_arrow_back_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="设置"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_17x"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_back" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.sn.gameelectricity.app.weight.customview.MyNestedScrollView
+        android:id="@+id/nsv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_marginBottom="@dimen/dimen_30x"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/tv_logout"
+        app:layout_constraintTop_toBottomOf="@+id/cl_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- 个人信息编辑 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_personal_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dimen_16x"
+                android:paddingVertical="@dimen/dimen_18x"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_personal_information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个人信息编辑"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_15x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:src="@drawable/ge_nav_arrow_rigth_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_personal_information"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_personal_information" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 账户安全 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_account_security"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dimen_16x"
+                android:paddingVertical="@dimen/dimen_18x"
+                app:layout_constraintTop_toBottomOf="@+id/cl_personal_information">
+
+                <TextView
+                    android:id="@+id/tv_account_security"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账户安全"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_15x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/iv_more3"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:src="@drawable/ge_nav_arrow_rigth_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_account_security"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_account_security" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 清除缓存 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_clear_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dimen_16x"
+                android:paddingVertical="@dimen/dimen_18x"
+                app:layout_constraintTop_toBottomOf="@+id/cl_account_security">
+
+                <TextView
+                    android:id="@+id/tv_clear_cache"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="清除缓存"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_15x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tv_clear_cache_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_5x"
+                    android:text=""
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_clear_cache"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_more2"
+                    app:layout_constraintTop_toTopOf="@+id/tv_clear_cache" />
+
+
+                <ImageView
+                    android:id="@+id/iv_more2"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:src="@drawable/ge_nav_arrow_rigth_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_clear_cache"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_clear_cache" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 隐私政策 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4x"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dimen_16x"
+                android:paddingVertical="@dimen/dimen_18x"
+                app:layout_constraintTop_toBottomOf="@+id/cl_clear_cache">
+
+                <TextView
+                    android:id="@+id/tv_privacy_policy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="隐私政策"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_15x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/iv_more4"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:src="@drawable/ge_nav_arrow_rigth_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_privacy_policy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_privacy_policy" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 用户协议 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_user_agreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dimen_16x"
+                android:paddingVertical="@dimen/dimen_18x"
+                app:layout_constraintTop_toBottomOf="@+id/cl_privacy_policy">
+
+                <TextView
+                    android:id="@+id/tv_user_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户协议"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_15x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/iv_more5"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:src="@drawable/ge_nav_arrow_rigth_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_user_agreement"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_user_agreement" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 意见反馈 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dimen_16x"
+                android:paddingVertical="@dimen/dimen_18x"
+                app:layout_constraintTop_toBottomOf="@+id/cl_user_agreement">
+
+                <TextView
+                    android:id="@+id/tvFeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="意见反馈"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_15x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_more11"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:src="@drawable/ge_nav_arrow_rigth_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/clFeedback"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/clFeedback" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- 个人信息收集清单 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clCollectionChecklist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4x"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dimen_16x"
+                android:paddingVertical="@dimen/dimen_18x"
+                app:layout_constraintTop_toBottomOf="@+id/clFeedback">
+
+                <TextView
+                    android:id="@+id/tvCollectionChecklist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个人信息收集清单"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_15x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_more8"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:src="@drawable/ge_nav_arrow_rigth_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/clCollectionChecklist"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/clCollectionChecklist" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 第三方SDK目录 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clThirdPartySDK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dimen_16x"
+                android:paddingVertical="@dimen/dimen_18x"
+                app:layout_constraintTop_toBottomOf="@+id/clCollectionChecklist">
+
+                <TextView
+                    android:id="@+id/tvThirdPartySDK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="第三方SDK目录"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_15x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_more9"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:src="@drawable/ge_nav_arrow_rigth_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/clThirdPartySDK"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/clThirdPartySDK" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 应用权限说明 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clAppPermissions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dimen_16x"
+                android:paddingVertical="@dimen/dimen_18x"
+                app:layout_constraintTop_toBottomOf="@+id/clThirdPartySDK">
+
+                <TextView
+                    android:id="@+id/tvAppPermissions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="应用权限说明"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_15x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_more10"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:src="@drawable/ge_nav_arrow_rigth_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/clAppPermissions"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/clAppPermissions" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- 检查更新 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_check_updates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4x"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dimen_16x"
+                android:paddingVertical="@dimen/dimen_18x"
+                app:layout_constraintTop_toBottomOf="@+id/clAppPermissions">
+
+                <TextView
+                    android:id="@+id/tv_check_updates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="检查更新"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_15x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_new_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_14x"
+                    android:paddingHorizontal="@dimen/dimen_6x"
+                    android:paddingVertical="@dimen/dimen_3x"
+                    android:text="有新版本"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/dimen_10x"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_check_updates"
+                    app:layout_constraintStart_toEndOf="@+id/tv_check_updates"
+                    app:layout_constraintTop_toTopOf="@+id/tv_check_updates" />
+
+                <ImageView
+                    android:id="@+id/iv_more7"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:src="@drawable/ge_nav_arrow_rigth_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_check_updates"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_check_updates" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- 关于我们 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_about_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dimen_16x"
+                android:paddingVertical="@dimen/dimen_18x"
+                app:layout_constraintTop_toBottomOf="@+id/cl_check_updates">
+
+                <TextView
+                    android:id="@+id/tv_about_us"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关于我们"
+                    android:textColor="#061925"
+                    android:textSize="@dimen/dimen_15x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/iv_more6"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:src="@drawable/ge_nav_arrow_rigth_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_about_us"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_about_us" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.sn.gameelectricity.app.weight.customview.MyNestedScrollView>
+
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_20x"
+        android:layout_marginBottom="@dimen/dimen_40x"
+        android:gravity="center"
+        android:paddingVertical="@dimen/dimen_13x"
+        android:text="退出登录"
+        android:textColor="#A1A7AF"
+        android:textSize="@dimen/dimen_16x"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

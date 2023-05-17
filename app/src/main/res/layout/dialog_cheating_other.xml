@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTop"
+        android:layout_width="260pt"
+        android:layout_height="398pt"
+        android:background="@drawable/bg_pup_zhuli"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="58pt"
+            android:layout_height="58pt"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="59pt"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_user_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Circle"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2pt" />
+
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="129pt"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="用户昵称最多8个字符...的助力邀请"
+            android:textColor="#57493B"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvContentTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4pt"
+            android:gravity="center"
+            android:text="帮我点一点"
+            android:textColor="#EF874E"
+            android:textSize="16pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContent" />
+
+        <TextView
+            android:id="@+id/tvContentThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4pt"
+            android:gravity="center"
+            android:text="助我一臂之力吧！"
+            android:textColor="#57493B"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContentTwo" />
+
+        <ImageView
+            android:id="@+id/sivImg"
+            android:layout_width="82pt"
+            android:layout_height="82pt"
+            android:layout_marginTop="207pt"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_empty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+        <Button
+            android:id="@+id/btnSure"
+            android:layout_width="192pt"
+            android:layout_height="40pt"
+            android:layout_marginTop="36pt"
+            android:background="@drawable/shape_radius_f19b3f"
+            android:text="帮Ta助力"
+            android:textColor="#FFFFFF"
+            android:textSize="14pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sivImg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="28pt"
+        android:layout_height="28pt"
+        android:layout_gravity="center"
+        android:layout_marginTop="20pt"
+        android:src="@drawable/ic_nav_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

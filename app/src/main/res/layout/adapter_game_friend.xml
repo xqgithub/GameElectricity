@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/dimen_12x"
+    android:paddingVertical="@dimen/dimen_12x">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/siv_avatar"
+        android:layout_width="@dimen/dimen_48x"
+        android:layout_height="@dimen/dimen_48x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/circleStyle"
+        app:srcCompat="@drawable/ge_default_gamer_icon" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8x"
+        android:layout_marginEnd="@dimen/dimen_10x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="用户姓名"
+        android:textColor="#57493B"
+        android:textSize="@dimen/dimen_14x"
+        app:layout_constraintEnd_toStartOf="@+id/iv_receive"
+        app:layout_constraintStart_toEndOf="@+id/siv_avatar"
+        app:layout_constraintTop_toTopOf="@+id/siv_avatar" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8x"
+        android:layout_marginTop="@dimen/dimen_4x"
+        android:text="累计产生贡献14890点"
+        android:textColor="#57493B"
+        android:textSize="@dimen/dimen_14x"
+        app:layout_constraintEnd_toEndOf="@+id/tv_name"
+        app:layout_constraintStart_toEndOf="@+id/siv_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+
+    <ImageView
+        android:id="@+id/iv_receive"
+        android:layout_width="@dimen/dimen_48x"
+        android:layout_height="@dimen/dimen_48x"
+        android:src="@drawable/ge_money_dialog_gift_receive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/dimen_20x"
+    android:paddingTop="@dimen/dimen_18x"
+    android:paddingBottom="@dimen/dimen_30x">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="分享至"
+        android:textColor="#061925"
+        android:textSize="@dimen/dimen_16x"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dimen_24x"
+        android:layout_height="@dimen/dimen_24x"
+        android:src="@drawable/ge_nav_close"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+
+    <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+        android:id="@+id/itDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16x"
+        android:layout_marginTop="@dimen/dimen_20x"
+        app:layout_constraintEnd_toStartOf="@+id/itWx"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+        android:id="@+id/itWx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/itQq"
+        app:layout_constraintStart_toEndOf="@+id/itDown"
+        app:layout_constraintTop_toTopOf="@+id/itDown" />
+
+    <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+        android:id="@+id/itQq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/itWb"
+        app:layout_constraintStart_toEndOf="@+id/itWx"
+        app:layout_constraintTop_toTopOf="@+id/itDown" />
+
+    <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+        android:id="@+id/itWb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_16x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itQq"
+        app:layout_constraintTop_toTopOf="@+id/itDown" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

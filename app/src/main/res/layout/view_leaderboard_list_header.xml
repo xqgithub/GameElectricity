@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/dimen_20x"
+    android:paddingTop="@dimen/dimen_26x"
+    android:paddingBottom="@dimen/dimen_16x">
+
+    <!-- 第一名 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/clthird"
+        app:layout_constraintStart_toEndOf="@+id/clSecond"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivAvatarFirst"
+            android:layout_width="@dimen/dimen_76x"
+            android:layout_height="@dimen/dimen_76x"
+            android:src="@drawable/img_empty"
+            app:layout_constraintBottom_toBottomOf="@+id/ivFrameFirst"
+            app:layout_constraintEnd_toEndOf="@+id/ivFrameFirst"
+            app:layout_constraintStart_toStartOf="@+id/ivFrameFirst"
+            app:layout_constraintTop_toTopOf="@+id/ivFrameFirst"
+            app:shapeAppearance="@style/circleStyle" />
+
+        <ImageView
+            android:id="@+id/ivFrameFirst"
+            android:layout_width="@dimen/dimen_88x"
+            android:layout_height="@dimen/dimen_88x"
+            android:src="@drawable/ge_leaderboard_first"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNameFirst"
+            android:layout_width="@dimen/dimen_102x"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12x"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="1"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_16x"
+            app:layout_constraintEnd_toEndOf="@+id/sivAvatarFirst"
+            app:layout_constraintStart_toStartOf="@+id/sivAvatarFirst"
+            app:layout_constraintTop_toBottomOf="@+id/sivAvatarFirst" />
+
+
+        <TextView
+            android:id="@+id/tvInviteesNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8x"
+            android:layout_marginTop="@dimen/dimen_4x"
+            android:text="99"
+            android:textColor="#EF874E"
+            android:textSize="@dimen/dimen_26x"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvUnit"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/tvNameFirst"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameFirst" />
+
+        <TextView
+            android:id="@+id/tvUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8x"
+            android:text="人"
+            android:textColor="#EF874E"
+            android:textSize="@dimen/dimen_12x"
+            app:layout_constraintBottom_toBottomOf="@+id/tvInviteesNum"
+            app:layout_constraintEnd_toEndOf="@+id/tvNameFirst"
+            app:layout_constraintStart_toEndOf="@+id/tvInviteesNum"
+            app:layout_constraintTop_toTopOf="@+id/tvInviteesNum" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 第二名 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_13x"
+        app:layout_constraintEnd_toStartOf="@+id/clFirst"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clFirst">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivAvatarSecond"
+            android:layout_width="@dimen/dimen_66x"
+            android:layout_height="@dimen/dimen_66x"
+            android:src="@drawable/img_empty"
+            app:layout_constraintBottom_toBottomOf="@+id/ivFrameSecond"
+            app:layout_constraintEnd_toEndOf="@+id/ivFrameSecond"
+            app:layout_constraintStart_toStartOf="@+id/ivFrameSecond"
+            app:layout_constraintTop_toTopOf="@+id/ivFrameSecond"
+            app:shapeAppearance="@style/circleStyle" />
+
+        <ImageView
+            android:id="@+id/ivFrameSecond"
+            android:layout_width="@dimen/dimen_70x"
+            android:layout_height="@dimen/dimen_70x"
+            android:src="@drawable/ge_leaderboard_second"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNameSecond"
+            android:layout_width="@dimen/dimen_102x"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12x"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="2"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_16x"
+            app:layout_constraintEnd_toEndOf="@+id/sivAvatarSecond"
+            app:layout_constraintStart_toStartOf="@+id/sivAvatarSecond"
+            app:layout_constraintTop_toBottomOf="@+id/sivAvatarSecond" />
+
+
+        <TextView
+            android:id="@+id/tvInviteesNum2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8x"
+            android:layout_marginTop="@dimen/dimen_4x"
+            android:text="99"
+            android:textColor="#EF874E"
+            android:textSize="@dimen/dimen_26x"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvUnit2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/tvNameSecond"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameSecond" />
+
+        <TextView
+            android:id="@+id/tvUnit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8x"
+            android:text="人"
+            android:textColor="#EF874E"
+            android:textSize="@dimen/dimen_12x"
+            app:layout_constraintBottom_toBottomOf="@+id/tvInviteesNum2"
+            app:layout_constraintEnd_toEndOf="@+id/tvNameSecond"
+            app:layout_constraintStart_toEndOf="@+id/tvInviteesNum2"
+            app:layout_constraintTop_toTopOf="@+id/tvInviteesNum2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 第三名 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clthird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_7x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clFirst"
+        app:layout_constraintTop_toTopOf="@+id/clSecond">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivAvatarthird"
+            android:layout_width="@dimen/dimen_60x"
+            android:layout_height="@dimen/dimen_60x"
+            android:src="@drawable/img_empty"
+            app:layout_constraintBottom_toBottomOf="@+id/ivFramethird"
+            app:layout_constraintEnd_toEndOf="@+id/ivFramethird"
+            app:layout_constraintStart_toStartOf="@+id/ivFramethird"
+            app:layout_constraintTop_toTopOf="@+id/ivFramethird"
+            app:shapeAppearance="@style/circleStyle" />
+
+        <ImageView
+            android:id="@+id/ivFramethird"
+            android:layout_width="@dimen/dimen_64x"
+            android:layout_height="@dimen/dimen_64x"
+            android:src="@drawable/ge_leaderboard_third"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNamethird"
+            android:layout_width="@dimen/dimen_102x"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12x"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="3"
+            android:textColor="#061925"
+            android:textSize="@dimen/dimen_16x"
+            app:layout_constraintEnd_toEndOf="@+id/sivAvatarthird"
+            app:layout_constraintStart_toStartOf="@+id/sivAvatarthird"
+            app:layout_constraintTop_toBottomOf="@+id/sivAvatarthird" />
+
+
+        <TextView
+            android:id="@+id/tvInviteesNum3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8x"
+            android:layout_marginTop="@dimen/dimen_4x"
+            android:text="99"
+            android:textColor="#EF874E"
+            android:textSize="@dimen/dimen_26x"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvUnit3"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/tvNamethird"
+            app:layout_constraintTop_toBottomOf="@+id/tvNamethird" />
+
+        <TextView
+            android:id="@+id/tvUnit3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8x"
+            android:text="人"
+            android:textColor="#EF874E"
+            android:textSize="@dimen/dimen_12x"
+            app:layout_constraintBottom_toBottomOf="@+id/tvInviteesNum3"
+            app:layout_constraintEnd_toEndOf="@+id/tvNamethird"
+            app:layout_constraintStart_toEndOf="@+id/tvInviteesNum3"
+            app:layout_constraintTop_toTopOf="@+id/tvInviteesNum3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

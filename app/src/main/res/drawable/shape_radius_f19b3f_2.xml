@@ -1,0 +1,19 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- 填充的颜色 -->
+    <gradient
+        android:angle="0"
+        android:endColor="#ED7A57"
+        android:startColor="#F19B3F"
+        android:type="linear" />
+
+    <!-- android:radius 圆角的半径 -->
+    <corners android:radius="3pt" />
+    <padding
+        android:bottom="2pt"
+        android:left="6pt"
+        android:right="6pt"
+        android:top="2pt" />
+
+</shape>

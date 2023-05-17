@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialog"
+    android:layout_width="@dimen/dimen_240x"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_388x"
+        android:background="@drawable/ge_dialog_newbie_polite_bg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_commodity_bg"
+            android:layout_width="@dimen/dimen_128x"
+            android:layout_height="@dimen/dimen_128x"
+            android:layout_marginTop="@dimen/dimen_60x"
+            android:src="@drawable/ge_dialog_newbie_polite_commodity_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/siv_commodity"
+            android:layout_width="@dimen/dimen_90x"
+            android:layout_height="@dimen/dimen_90x"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_commodity_bg"
+            app:layout_constraintEnd_toEndOf="@+id/iv_commodity_bg"
+            app:layout_constraintStart_toStartOf="@+id/iv_commodity_bg"
+            app:layout_constraintTop_toTopOf="@+id/iv_commodity_bg"
+            app:shapeAppearance="@style/circleStyle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_gold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_3x"
+            android:paddingEnd="@dimen/dimen_6x"
+            app:layout_constraintEnd_toEndOf="@+id/iv_commodity_bg"
+            app:layout_constraintStart_toStartOf="@+id/iv_commodity_bg"
+            app:layout_constraintTop_toBottomOf="@+id/siv_commodity">
+
+            <ImageView
+                android:id="@+id/iv_my_gold"
+                android:layout_width="@dimen/dimen_20x"
+                android:layout_height="@dimen/dimen_20x"
+                android:src="@drawable/ge_me_gold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4x"
+                android:gravity="center"
+                android:text="0/20"
+                android:textColor="#061925"
+                android:textSize="@dimen/dimen_12x"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_my_gold"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12x"
+            android:gravity="center"
+            android:text="人人必得，拒绝套路"
+            android:textColor="#80FFFFFF"
+            android:textSize="@dimen/dimen_10x"
+            app:layout_constraintEnd_toEndOf="@+id/cl_gold"
+            app:layout_constraintStart_toStartOf="@+id/cl_gold"
+            app:layout_constraintTop_toBottomOf="@+id/cl_gold" />
+
+
+        <TextView
+            android:id="@+id/tv_exchange"
+            android:layout_width="@dimen/dimen_140x"
+            android:layout_height="@dimen/dimen_40x"
+            android:layout_marginTop="@dimen/dimen_12x"
+            android:background="@drawable/ge_dialog_newbie_polite_exchange_bg"
+            android:gravity="center"
+            android:text="立即兑换"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/dimen_14x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dimen_28x"
+        android:layout_height="@dimen/dimen_28x"
+        android:layout_marginTop="@dimen/dimen_20x"
+        android:src="@drawable/ge_dialog_newbie_polite_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_content" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pag_finger"
+        android:layout_width="@dimen/dimen_56x"
+        android:layout_height="@dimen/dimen_56x"
+        android:layout_marginEnd="@dimen/dimen_17x"
+        android:layout_marginBottom="@dimen/dimen_8x"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/iv_close"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

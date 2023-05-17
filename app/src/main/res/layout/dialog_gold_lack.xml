@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240pt"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="50pt"
+        android:layout_height="35pt"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_dialog_top2" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_pup_img_bg"
+        android:paddingBottom="24pt">
+
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="240pt"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24pt"
+                android:text="主人，您的金币不够啦～"
+                android:textColor="#57493B"
+                android:textSize="13pt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llContent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSure"
+                android:layout_width="140pt"
+                android:layout_height="40pt"
+                android:layout_marginLeft="12pt"
+                android:background="@drawable/shape_radius_f19b3f"
+                android:text="赚金币 >"
+                android:textColor="#FFFFFF"
+                android:textSize="14pt" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

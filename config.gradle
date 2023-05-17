@@ -1,0 +1,106 @@
+/**
+ * 在主项目的根目录下创建config.gradle文件
+ * 在这里单独处理统一依赖问题
+ * 注意需要在根目录的build.gradle中进行引入
+ */
+
+ext {
+    android = [
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.2",
+            minSdkVersion    : 21,
+            targetSdkVersion : 29,
+            versionCode      : 1,
+            versionName      : "1.0.1" //正式需改
+    ]
+
+    /**
+     * 依赖包的版本号
+     */
+    dependenciesversion = [
+            autosize                  : "1.2.1",
+            utilcodex                 : "1.31.0",
+            okhttp3                   : "4.9.0",
+            logging_interceptor       : "4.9.0",
+            rxjava3RxAndroidSDK       : "3.0.0",
+            rxjava3RxjavaSDk          : "3.0.6",
+            rxjava3RxkotlinSDk        : "3.0.1",
+            retrofit2RetrofitSDK      : "2.9.0",
+            retrofit2AdapterRxjava3SDk: "2.9.0",
+            retrofit2ConverterSDk     : "2.9.0",
+            ByRecyclerViewSDk         : "1.3.0",
+            immersionbarSDK           : "3.0.0",
+            glide                     : "4.11.0",
+            SwipeDelMenuLayout        : "V1.3.0",
+            eventbus3                 : "3.1.1",
+            bottomDialogSDK           : "1.1.9",
+            AndroidPickerViewSDk      : "4.1.9",
+            xpopupSDk                 : "2.2.0",
+            AppStartup                : "1.0.2",
+            BaiduMapSDKLocation       : "9.1.8",
+            BaiduMapSDKSearch         : "7.4.0",
+            ProgressBarSDK            : "1.1.1",
+            pictureSelectorSDK        : "v2.6.0",
+            androidLiteSDK            : "5.7.1",
+            rxlifecycle               : "3.0.0",
+            rxlifecycle_android       : "3.0.0",
+            rxlifecycle_components    : "3.0.0",
+            AVLoadingIndicatorView    : "2.1.3",
+            stetho                    : "1.5.1",
+            stethookhttp3             : "1.5.1",
+    ]
+
+    /**
+     * 依赖包
+     */
+    dependencies = [
+            autosize                  : "me.jessyan:autosize:${dependenciesversion.autosize}",
+            utilcodex                 : "com.blankj:utilcodex:${dependenciesversion.utilcodex}",
+            okhttp3                   : "com.squareup.okhttp3:okhttp:${dependenciesversion.okhttp3}",
+            logging_interceptor       : "com.squareup.okhttp3:logging-interceptor:${dependenciesversion.logging_interceptor}",
+            rxjava3RxAndroidSDK       : "io.reactivex.rxjava3:rxandroid:${dependenciesversion.rxjava3RxAndroidSDK}",
+            rxjava3RxjavaSDk          : "io.reactivex.rxjava3:rxjava:${dependenciesversion.rxjava3RxjavaSDk}",
+            rxjava3RxkotlinSDk        : "io.reactivex.rxjava3:rxkotlin:${dependenciesversion.rxjava3RxkotlinSDk}",
+            retrofit2RetrofitSDK      : "com.squareup.retrofit2:retrofit:${dependenciesversion.retrofit2RetrofitSDK}",
+            retrofit2AdapterRxjava3SDk: "com.squareup.retrofit2:adapter-rxjava3:${dependenciesversion.retrofit2AdapterRxjava3SDk}",
+            retrofit2ConverterSDk     : "com.squareup.retrofit2:converter-gson:${dependenciesversion.retrofit2ConverterSDk}",
+            ByRecyclerViewSDk         : "com.github.youlookwhat:ByRecyclerView:${dependenciesversion.ByRecyclerViewSDk}",
+            immersionbarSDK           : "com.gyf.immersionbar:immersionbar:${dependenciesversion.immersionbarSDK}",
+            glide                     : "com.github.bumptech.glide:glide:${dependenciesversion.glide}",
+            SwipeDelMenuLayout        : "com.github.mcxtzhang:SwipeDelMenuLayout:${dependenciesversion.SwipeDelMenuLayout}",
+            eventbus3                 : "org.greenrobot:eventbus:${dependenciesversion.eventbus3}",
+            bottomDialogSDK           : "me.shaohui:bottomdialog:${dependenciesversion.bottomDialogSDK}",
+            AndroidPickerViewSDk      : "com.contrarywind:Android-PickerView:${dependenciesversion.AndroidPickerViewSDk}",
+            xpopupSDk                 : "com.lxj:xpopup:${dependenciesversion.xpopupSDk}",
+            AppStartup                : "com.github.Caij:DGAppStartup:${dependenciesversion.AppStartup}",
+            BaiduMapSDKLocation       : "com.baidu.lbsyun:BaiduMapSDK_Location:${dependenciesversion.BaiduMapSDKLocation}",
+            BaiduMapSDKSearch         : "com.baidu.lbsyun:BaiduMapSDK_Search:${dependenciesversion.BaiduMapSDKSearch}",
+            ProgressBarSDK            : "com.github.zhouzhuo810:ZzHorizontalProgressBar:${dependenciesversion.ProgressBarSDK}",
+            pictureSelectorSDK        : "com.github.LuckSiege.PictureSelector:picture_library:${dependenciesversion.pictureSelectorSDK}",
+            androidLiteSDK            : "com.qcloud.cos:cos-android-lite:${dependenciesversion.androidLiteSDK}",
+            rxlifecycle               : "com.trello.rxlifecycle3:rxlifecycle:${dependenciesversion.rxlifecycle}",
+            rxlifecycle_android       : "com.trello.rxlifecycle3:rxlifecycle-android:${dependenciesversion.rxlifecycle_android}",
+            rxlifecycle_components    : "com.trello.rxlifecycle3:rxlifecycle-components:${dependenciesversion.rxlifecycle_components}",
+            AVLoadingIndicatorView    : "com.wang.avi:library:${dependenciesversion.AVLoadingIndicatorView}",
+            stetho                    : "com.facebook.stetho:stetho:${dependenciesversion.stetho}",
+            stethookhttp3             : "com.facebook.stetho:stetho-okhttp3:${dependenciesversion.stethookhttp3}",
+    ]
+
+    /**
+     * libs 依赖包
+     */
+    libs = [
+
+    ]
+
+    /** 环境配置---测试 **/
+    EnvironmentConfigurationTest = [
+            BASE_URL: "https://gmalltest.aifun.com/"
+//        BASE_URL: "http:192.168.2.49:25001/"
+    ]
+    /** 环境配置---正式环境 **/
+    EnvironmentConfigurationRelease = [
+            BASE_URL: "https://gmalltest.aifun.com/"
+    ]
+
+}

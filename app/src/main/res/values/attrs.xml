@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ImFlexboxLayout">
+        <attr name="viewPartMain" format="reference"></attr>
+        <attr name="viewPartSlave" format="reference"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="TextItemCell">
+        <!-- 左侧图标 -->
+        <attr name="TextItemCell_icon" format="reference" />
+        <!-- 左侧图标 宽高设定 -->
+        <attr name="TextItemCell_icon_width" format="reference|dimension" />
+        <attr name="TextItemCell_icon_height" format="reference|dimension" />
+        <!-- 标题 -->
+        <attr name="TextItemCell_title" format="string" />
+        <attr name="TextItemCell_title_textStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- 标题文字大小 -->
+        <attr name="TextItemCell_title_textsize" format="reference|dimension" />
+        <!-- 标题颜色 -->
+        <attr name="TextItemCell_titleColor" format="color" />
+        <!-- 副标题 -->
+        <attr name="TextItemCell_subtitle" format="string" />
+        <!-- 右侧值#文本 -->
+        <attr name="TextItemCell_valuetext" format="string" />
+        <!-- 右侧值#图标 -->
+        <attr name="TextItemCell_valueicon" format="reference" />
+        <!-- 右侧值#图标 宽高设定 -->
+        <attr name="TextItemCell_valueicon_width" format="reference|dimension" />
+        <attr name="TextItemCell_valueicon_height" format="reference|dimension" />
+        <!-- 右箭头 -->
+        <attr name="TextItemCell_arrow" format="boolean" />
+        <!-- 是否需要分隔线 -->
+        <attr name="TextItemCell_dividerenable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TextCheckCell">
+        <!-- icon -->
+        <attr name="TextCheckCell_icon" format="reference" />
+        <!-- 标题 -->
+        <attr name="TextCheckCell_title" format="string" />
+        <attr name="TextCheckCell_title_textStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- 标题颜色 -->
+        <attr name="TextCheckCell_titleColor" format="color" />
+        <!-- 副标题 -->
+        <attr name="TextCheckCell_subtitle" format="string" />
+        <!-- 是否选择 -->
+        <attr name="TextCheckCell_checked" format="boolean" />
+        <!-- 是否需要分隔线 -->
+        <attr name="TextCheckCell_dividerenable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="InputCell">
+        <!-- 文字大小  -->
+        <attr name="InputCell_textSize" format="reference|dimension" />
+        <!-- 提示语 -->
+        <attr name="InputCell_hint" format="string" />
+        <!-- 提示语颜色 -->
+        <attr name="InputCell_hintTextColor" format="color" />
+
+        <attr name="InputCell_backgroundColor" format="color" />
+    </declare-styleable>
+
+    <!-- 文字大小 -->
+    <!-- 会话标题 -->
+    <attr name="dialogTitleTextSize" format="reference|dimension" />
+    <!-- 会话标题表情大小 -->
+    <attr name="dialogTitleEmojiSize" format="reference|dimension" />
+    <!-- 会话内容 -->
+    <attr name="dialogContentTextSize" format="reference|dimension" />
+    <!-- 会话内容表情大小 -->
+    <attr name="dialogContentEmojiSize" format="reference|dimension" />
+    <!-- 会话内容标题文本大小：群邀请标题文本等 -->
+    <attr name="dialogContentTitleTextSize" format="reference|dimension" />
+    <!-- 会话内容描述文本大小：群邀请描述文本等 -->
+    <attr name="dialogContentDescTextSize" format="reference|dimension" />
+    <!-- 会话时间 -->
+    <attr name="dialogTimeTextSize" format="reference|dimension" />
+    <!-- 会话未读 -->
+    <attr name="dialogUnreadTextSize" format="reference|dimension" />
+    <!-- 会话未读背景 -->
+    <attr name="dialogUnreadBackground" format="reference|dimension" />
+    <!-- 会话高度 -->
+    <attr name="dialogHeight" format="reference|dimension" />
+    <!-- 聊天文本大小 -->
+    <attr name="ChatTextSize" format="reference|dimension" />
+    <!-- 聊天表情大小 -->
+    <attr name="ChatEmojiSize" format="reference|dimension" />
+    <!-- 聊天时间 -->
+    <attr name="ChatTimeTextSize" format="reference|dimension" />
+    <!-- 聊天链接内容文字大小 -->
+    <attr name="ChatLinkContentTextSize" format="reference|dimension" />
+    <!-- 聊天引用标题 -->
+    <attr name="ChatReferenceTitleTextSize" format="reference|dimension" />
+    <!-- 聊天引用内容 -->
+    <attr name="ChatReferenceContentTextSize" format="reference|dimension" />
+    <!-- 聊天输入框高度 -->
+    <attr name="ChatInputEditTextHeight" format="reference|dimension" />
+    <!-- 聊天输入栏高度 -->
+    <attr name="ChatInputHeight" format="reference|dimension" />
+    <!-- 通知消息&时间 文本大小 -->
+    <attr name="ChatNotificationTimeTextSize" format="reference|dimension" />
+
+    <!-- 语音消息时间 文本大小 -->
+    <attr name="ChatAudioTimeTextSize" format="reference|dimension" />
+
+    <declare-styleable name="CropImageView">
+        <attr name="cropGuidelines">
+            <enum name="off" value="0" />
+            <enum name="onTouch" value="1" />
+            <enum name="on" value="2" />
+        </attr>
+        <attr name="cropScaleType">
+            <enum name="fitCenter" value="0" />
+            <enum name="center" value="1" />
+            <enum name="centerCrop" value="2" />
+            <enum name="centerInside" value="3" />
+        </attr>
+        <attr name="cropShape">
+            <enum name="rectangle" value="0" />
+            <enum name="oval" value="1" />
+        </attr>
+        <attr name="cropAutoZoomEnabled" format="boolean" />
+        <attr name="cropMaxZoom" format="integer" />
+        <attr name="cropMultiTouchEnabled" format="boolean" />
+        <attr name="cropFixAspectRatio" format="boolean" />
+        <attr name="cropAspectRatioX" format="integer" />
+        <attr name="cropAspectRatioY" format="integer" />
+        <attr name="cropInitialCropWindowPaddingRatio" format="float" />
+        <attr name="cropBorderLineThickness" format="dimension" />
+        <attr name="cropBorderLineColor" format="color" />
+        <attr name="cropBorderCornerThickness" format="dimension" />
+        <attr name="cropBorderCornerOffset" format="dimension" />
+        <attr name="cropBorderCornerLength" format="dimension" />
+        <attr name="cropBorderCornerColor" format="color" />
+        <attr name="cropGuidelinesThickness" format="dimension" />
+        <attr name="cropGuidelinesColor" format="color" />
+        <attr name="cropBackgroundColor" format="color" />
+        <attr name="cropSnapRadius" format="dimension" />
+        <attr name="cropTouchRadius" format="dimension" />
+        <attr name="cropShowCropOverlay" format="boolean" />
+        <attr name="cropShowProgressBar" format="boolean" />
+        <attr name="cropMinCropWindowWidth" format="dimension" />
+        <attr name="cropMinCropWindowHeight" format="dimension" />
+        <attr name="cropMinCropResultWidthPX" format="float" />
+        <attr name="cropMinCropResultHeightPX" format="float" />
+        <attr name="cropMaxCropResultWidthPX" format="float" />
+        <attr name="cropMaxCropResultHeightPX" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="NumKeyBoardView">
+        <attr name="showDecimalPoint" format="boolean" />
+        <attr name="alwaysShow" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PasswordInputView">
+        <attr name="pivPasswordWidth" format="dimension" />
+        <attr name="pivPasswordLength" format="integer" />
+        <attr name="isHoldBorder" format="boolean" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="bgColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="LanguageTextView">
+        <attr name="stringId" format="reference" />
+    </declare-styleable>
+
+    <!-- 文字颜色 -->
+    <!-- 聊条内容文本颜色 -->
+    <attr name="ChatOutContentTextColor" format="color" />
+    <attr name="ChatInContentTextColor" format="color" />
+    <!-- 聊天回复标题颜色-->
+    <attr name="ChatReplyOutTitleTextColor" format="color" />
+    <attr name="ChatReplyInTitleTextColor" format="color" />
+    <!-- 聊天回复副标题颜色-->
+    <attr name="ChatReplyOutSubTitleTextColor" format="color" />
+    <attr name="ChatReplyInSubTitleTextColor" format="color" />
+    <!-- 标题栏背景色 -->
+    <attr name="titleBarBackgroundColor" format="color" />
+    <!-- 标题栏文字颜色 -->
+    <attr name="titleBarTextColor" format="color" />
+    <!-- 分割线颜色 -->
+    <attr name="listDividerColor" format="color" />
+    <!-- 主题颜色 -->
+    <attr name="mainThemeColor" format="color" />
+    <!-- 主题背景色 如列表、Cell背景色 -->
+    <attr name="mainThemeLightBackgroundColor" format="color" />
+    <!-- 主题背景色，窗口背景色 -->
+    <attr name="mainWindowBackgroundColor" format="color" />
+
+    <attr name="textColorHint" format="color" />
+
+    <attr name="textCellStyle" format="reference" />
+    <attr name="switchCellStyle" format="reference" />
+
+    <declare-styleable name="ItemSwitchCell">
+        <!-- 左右的间距 -->
+        <attr name="title" />
+        <!-- 标题的文本颜色 -->
+        <attr name="titleTextColor" />
+        <attr name="subtitle" />
+        <attr name="subtitleTextColor" />
+        <attr name="icon" />
+        <attr name="trackDefaultColor" format="color" />
+        <attr name="trackCheckedColor" format="color" />
+        <attr name="thumbColor" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundAppCompatImageView">
+        <!-- 描边宽度-->
+        <attr name="border_width" format="dimension" />
+        <!-- 描边颜色-->
+        <attr name="border_color" format="color" />
+        <!--圆角大小-->
+        <attr name="corner_radius" format="dimension" />
+        <!--左上圆角大小-->
+        <attr name="leftTop_corner_radius" format="dimension" />
+        <!--右上圆角大小-->
+        <attr name="rightTop_corner_radius" format="dimension" />
+        <!--左下圆角大小-->
+        <attr name="leftBottom_corner_radius" format="dimension" />
+        <!--右下圆角大小-->
+        <attr name="rightBottom_corner_radius" format="dimension" />
+        <!--图片类型：圆角或者圆形-->
+        <attr name="type" format="enum">
+            <enum name="oval" value="2" />
+            <enum name="round" value="1" />
+            <enum name="circle" value="0" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Emojicon"><attr format="dimension" name="emojiconSize"/><attr format="enum" name="emojiconAlignment">
+        <enum name="bottom" value="0"/>
+        <enum name="baseline" value="1"/>
+    </attr><attr format="integer" name="emojiconTextStart"/><attr format="integer" name="emojiconTextLength"/><attr format="boolean" name="emojiconUseSystemDefault"/></declare-styleable>
+
+    <declare-styleable name="LabelsView">
+        <attr name="selectType" format="enum">
+            <enum name="NONE" value="1" />
+            <enum name="SINGLE" value="2" />
+            <enum name="SINGLE_IRREVOCABLY" value="3" />
+            <enum name="MULTI" value="4" />
+        </attr>
+
+        <attr name="labelGravity">
+            <!-- Push object to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30" />
+            <!-- Push object to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50" />
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03" />
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05" />
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10" />
+            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70" />
+            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01" />
+            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            <flag name="fill_horizontal" value="0x07" />
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11" />
+            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill" value="0x77" />
+            <!-- Additional option that can be set to have the top and/or bottom edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the vertical gravity: a top gravity will clip the bottom
+                 edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            <flag name="clip_vertical" value="0x80" />
+            <!-- Additional option that can be set to have the left and/or right edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the horizontal gravity: a left gravity will clip the right
+                 edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            <flag name="clip_horizontal" value="0x08" />
+            <!-- Push object to the beginning of its container, not changing its size. -->
+            <flag name="start" value="0x00800003" />
+            <!-- Push object to the end of its container, not changing its size. -->
+            <flag name="end" value="0x00800005" />
+        </attr>
+
+        <attr name="maxSelect" format="integer" />
+        <attr name="minSelect" format="integer" />
+        <attr name="maxLines" format="integer" />
+        <attr name="isIndicator" format="boolean" />
+        <attr name="labelTextColor" format="reference|color" />
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="labelTextWidth" format="dimension">
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="labelTextHeight" format="dimension">
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="labelTextPadding" format="dimension" />
+        <attr name="labelTextPaddingLeft" format="dimension" />
+        <attr name="labelTextPaddingTop" format="dimension" />
+        <attr name="labelTextPaddingRight" format="dimension" />
+        <attr name="labelTextPaddingBottom" format="dimension" />
+        <attr name="lineMargin" format="dimension" />
+        <attr name="wordMargin" format="dimension" />
+        <attr name="labelBackground" format="reference|color" />
+        <attr name="singleLine" format="boolean" />
+        <attr name="isTextBold" format="boolean" />
+    </declare-styleable>
+
+</resources>

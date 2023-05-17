@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.sn.gameelectricity.app.weight.customview.MyNestedScrollView
+        android:id="@+id/nsv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_30x"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_me_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_me_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ge_mine_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_settting"
+                    android:layout_width="@dimen/dimen_20x"
+                    android:layout_height="@dimen/dimen_20x"
+                    android:layout_marginTop="@dimen/dimen_35x"
+                    android:layout_marginEnd="@dimen/dimen_20x"
+                    android:src="@drawable/ge_me_setting"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_20x"
+                    android:layout_marginTop="@dimen/dimen_24x"
+                    android:background="@drawable/ge_me_card_bg"
+                    android:paddingVertical="@dimen/dimen_24x"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_settting">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/siv_avatar"
+                        android:layout_width="@dimen/dimen_48x"
+                        android:layout_height="@dimen/dimen_48x"
+                        android:layout_marginStart="@dimen/dimen_16x"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/circleStyle"
+                        app:srcCompat="@drawable/default_user_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_usernickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_12x"
+                        android:maxLines="1"
+                        android:text="AIFUN 0001"
+                        android:textColor="#061925"
+                        android:textSize="@dimen/dimen_18x"
+                        app:layout_constraintStart_toEndOf="@+id/siv_avatar"
+                        app:layout_constraintTop_toTopOf="@+id/siv_avatar" />
+
+                    <TextView
+                        android:id="@+id/tv_phone_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_4x"
+                        android:text="133 **** 8045"
+                        android:textColor="#6A7079"
+                        android:textSize="@dimen/dimen_13x"
+                        app:layout_constraintStart_toStartOf="@+id/tv_usernickname"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_usernickname" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_integral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_20x"
+                android:layout_marginTop="@dimen/dimen_14x"
+                android:background="@drawable/shape_gradient_me"
+                android:elevation="5dp"
+                android:paddingBottom="@dimen/dimen_15x"
+                app:layout_constraintTop_toBottomOf="@+id/cl_me_info">
+
+                <TextView
+                    android:id="@+id/tv_my_gold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_14x"
+                    android:layout_marginTop="@dimen/dimen_17x"
+                    android:text="我的金币"
+                    android:textColor="#6A7079"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_my_gold"
+                    android:layout_width="@dimen/dimen_24x"
+                    android:layout_height="@dimen/dimen_24x"
+                    android:layout_marginEnd="@dimen/dimen_8x"
+                    android:src="@drawable/ge_me_gold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_my_gold_num"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_my_gold_num"
+                    app:layout_constraintTop_toTopOf="@+id/tv_my_gold_num" />
+
+
+                <TextView
+                    android:id="@+id/tv_my_gold_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_14x"
+                    android:layout_marginEnd="@dimen/dimen_14x"
+                    android:text="4758602"
+                    android:textColor="#57493B"
+                    android:textSize="@dimen/dimen_20x"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_my_gold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_my_gold" />
+
+
+                <TextView
+                    android:id="@+id/tv_my_scores"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32x"
+                    android:text="我的积分"
+                    android:textColor="#6A7079"
+                    android:textSize="@dimen/dimen_14x"
+                    app:layout_constraintStart_toStartOf="@+id/tv_my_gold"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_my_gold" />
+
+
+                <ImageView
+                    android:id="@+id/iv_my_scores"
+                    android:layout_width="22dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="@dimen/dimen_8x"
+                    android:src="@drawable/ge_me_order"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_my_scores_num"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_my_scores_num"
+                    app:layout_constraintTop_toTopOf="@+id/tv_my_scores_num" />
+
+
+                <TextView
+                    android:id="@+id/tv_my_scores_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_14x"
+                    android:layout_marginEnd="@dimen/dimen_14x"
+                    android:text="4758602"
+                    android:textColor="#57493B"
+                    android:textSize="@dimen/dimen_20x"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_my_scores"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_my_scores" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_my_redemption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_32x"
+                android:text="我的换购"
+                android:textColor="#061925"
+                android:textSize="@dimen/dimen_16x"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/cl_integral"
+                app:layout_constraintTop_toBottomOf="@+id/cl_integral" />
+
+
+            <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+                android:id="@+id/itui_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_30x"
+                android:layout_marginTop="@dimen/dimen_20x"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_my_redemption" />
+
+            <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+                android:id="@+id/itui_pre_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_55x"
+                app:layout_constraintStart_toEndOf="@+id/itui_all"
+                app:layout_constraintTop_toTopOf="@+id/itui_all" />
+
+            <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+                android:id="@+id/itui_pending_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_55x"
+                app:layout_constraintStart_toEndOf="@+id/itui_pre_payment"
+                app:layout_constraintTop_toTopOf="@+id/itui_pre_payment" />
+
+            <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+                android:id="@+id/itui_prepare_shipment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_55x"
+                app:layout_constraintStart_toEndOf="@+id/itui_pending_delivery"
+                app:layout_constraintTop_toTopOf="@+id/itui_pending_delivery" />
+
+            <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+                android:id="@+id/itui_pending_receipt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_30x"
+                app:layout_constraintStart_toStartOf="@+id/itui_all"
+                app:layout_constraintTop_toBottomOf="@+id/itui_all" />
+
+            <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+                android:id="@+id/itui_completed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_55x"
+                app:layout_constraintStart_toEndOf="@+id/itui_pending_receipt"
+                app:layout_constraintTop_toTopOf="@+id/itui_pending_receipt" />
+
+            <TextView
+                android:id="@+id/tv_my_function"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_32x"
+                android:text="我的功能"
+                android:textColor="#061925"
+                android:textSize="@dimen/dimen_16x"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/cl_integral"
+                app:layout_constraintTop_toBottomOf="@+id/itui_pending_receipt" />
+
+
+            <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+                android:id="@+id/ituiEquityCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_19x"
+                app:layout_constraintEnd_toEndOf="@+id/itui_all"
+                app:layout_constraintStart_toStartOf="@+id/itui_all"
+                app:layout_constraintTop_toBottomOf="@+id/tv_my_function" />
+
+
+            <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+                android:id="@+id/itui_address_management"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/itui_pre_payment"
+                app:layout_constraintStart_toStartOf="@+id/itui_pre_payment"
+                app:layout_constraintTop_toTopOf="@+id/ituiEquityCenter" />
+
+            <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi
+                android:id="@+id/itui_account_security"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/itui_pending_delivery"
+                app:layout_constraintStart_toStartOf="@+id/itui_pending_delivery"
+                app:layout_constraintTop_toTopOf="@+id/ituiEquityCenter" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.sn.gameelectricity.app.weight.customview.MyNestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="240pt"
+        android:layout_height="304pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="240pt"
+            android:layout_height="270pt"
+            android:layout_marginTop="34pt"
+            android:background="@drawable/ic_pup_img_bg"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv01"
+            android:layout_width="50pt"
+            android:layout_height="34pt"
+            android:background="@drawable/icon_dialog_top2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="192pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18pt"
+            android:gravity="center"
+            android:text="登录奖励"
+            android:textColor="#57493B"
+            android:textSize="18pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv01" />
+
+        <TextView
+            android:id="@+id/tvContent2"
+            android:layout_width="192pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8pt"
+            android:gravity="center"
+            android:text="亲，记得明天还有金币噢～"
+            android:textColor="#57493B"
+            android:textSize="13pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContent" />
+
+
+        <ImageView
+            android:id="@+id/sivImg"
+            android:layout_width="110pt"
+            android:layout_height="110pt"
+            android:layout_marginTop="8pt"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_img_gold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContent2"
+            app:shapeAppearance="@style/roundedCornerImageStyle4" />
+
+        <TextView
+            android:id="@+id/tvConten"
+            android:layout_width="92pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100pt"
+            android:background="@drawable/shape_radius_fff6f0"
+            android:gravity="center"
+            android:text="x 48592"
+            android:textColor="#EF874E"
+            android:textSize="12pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContent2" />
+
+        <Button
+            android:id="@+id/btnSure"
+            android:layout_width="140pt"
+            android:layout_height="40pt"
+            android:layout_marginTop="26pt"
+            android:background="@drawable/shape_radius_f19b3f"
+            android:text="我知道了"
+            android:textColor="#FFFFFF"
+            android:textSize="14pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sivImg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_90x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_80x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/siv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_182x"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/roundedCornerTopLeftTopRight24"
+        app:srcCompat="@drawable/ge_manor_bg" />
+
+    <ImageView
+        android:id="@+id/iv_title_top"
+        android:layout_width="@dimen/dimen_200x"
+        android:layout_height="@dimen/dimen_80x"
+        android:layout_marginTop="@dimen/dimen_90x"
+        android:src="@drawable/ge_money_dialog_title_feed_eggs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="@dimen/dimen_120x"
+        android:layout_height="@dimen/dimen_36x"
+        android:layout_marginTop="@dimen/dimen_162x"
+        android:src="@drawable/ge_money_dialog_title_manor"
+        app:layout_constraintEnd_toEndOf="@+id/iv_title_top"
+        app:layout_constraintStart_toStartOf="@+id/iv_title_top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dimen_40x"
+        android:layout_height="@dimen/dimen_40x"
+        android:layout_marginEnd="@dimen/dimen_4x"
+        android:src="@drawable/ge_money_dialog_close"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_title" />
+
+
+    <!-- 鹅动画 -->
+    <RelativeLayout
+        android:id="@+id/rl_pag_goose"
+        android:layout_width="@dimen/dimen_200x"
+        android:layout_height="@dimen/dimen_200x"
+        android:layout_marginTop="@dimen/dimen_20x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/siv_bg">
+
+        <ImageView
+            android:id="@+id/iv_goose"
+            android:layout_width="@dimen/dimen_200x"
+            android:layout_height="@dimen/dimen_200x"
+            android:src="@drawable/ge_money_goose"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_feed_trough"
+        android:layout_width="@dimen/dimen_88x"
+        android:layout_height="@dimen/dimen_78x"
+        android:layout_marginEnd="@dimen/dimen_35x"
+        android:src="@drawable/ge_manor_feed_trough_full"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_goose_nest"
+        app:layout_constraintTop_toTopOf="@+id/iv_goose_nest" />
+
+    <com.sn.gameelectricity.app.weight.customview.CountdownProgressBar
+        android:id="@+id/pb_feed_trough"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_18x"
+        android:paddingHorizontal="@dimen/dimen_5x"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_feed_trough"
+        app:layout_constraintEnd_toEndOf="@+id/iv_feed_trough"
+        app:layout_constraintStart_toStartOf="@+id/iv_feed_trough" />
+
+
+    <com.sn.gameelectricity.app.weight.customview.ImageAndTextUi3
+        android:id="@+id/itui_feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_23x"
+        android:layout_marginBottom="@dimen/dimen_10x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_mask_layer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#CC000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_goose_nest"
+        android:layout_width="@dimen/dimen_88x"
+        android:layout_height="@dimen/dimen_78x"
+        android:layout_marginStart="@dimen/dimen_35x"
+        android:layout_marginTop="@dimen/dimen_170x"
+        android:src="@drawable/ge_manor_goose_nest"
+        app:layout_constraintEnd_toStartOf="@+id/iv_feed_trough"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rl_pag_goose" />
+
+    <TextView
+        android:id="@+id/tv_number_awards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_70x"
+        android:gravity="center"
+        android:maxWidth="@dimen/dimen_54x"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/dimen_8x"
+        android:paddingVertical="@dimen/dimen_2x"
+        android:text="x30"
+        android:textColor="#864F17"
+        android:textSize="@dimen/dimen_12x"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/iv_goose_nest"
+        app:layout_constraintTop_toTopOf="@+id/iv_goose_nest" />
+
+    <com.sn.gameelectricity.app.weight.customview.CountdownProgressBar
+        android:id="@+id/pb_goose_nest"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_18x"
+        android:paddingHorizontal="@dimen/dimen_5x"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_goose_nest"
+        app:layout_constraintEnd_toEndOf="@+id/iv_goose_nest"
+        app:layout_constraintStart_toStartOf="@+id/iv_goose_nest" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pag_finger"
+        android:layout_width="@dimen/dimen_44x"
+        android:layout_height="@dimen/dimen_44x"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/tv_number_awards"
+        app:layout_constraintStart_toStartOf="@+id/tv_number_awards"
+        app:layout_constraintTop_toBottomOf="@+id/tv_number_awards"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
